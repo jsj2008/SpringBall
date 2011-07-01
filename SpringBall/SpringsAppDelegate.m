@@ -1,20 +1,20 @@
 //
-//  AppDelegate.m
-//  SpringBall
+//  SpringsAppDelegate.m
+//  Springs
 //
-//  Created by naceka on 01.07.11.
-//  Copyright __MyCompanyName__ 2011. All rights reserved.
+//  Created by s1ip on 28.01.10.
+//  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
+#import "SpringsAppDelegate.h"
 #import "cocos2d.h"
+//#import "HelloWorldScene.h"
 
-#import "AppDelegate.h"
-#import "GameConfig.h"
-#import "HelloWorldLayer.h"
-#import "RootViewController.h"
 #import "SpringScene.h"
+#import "LevelScene1.h"
+#import "RootViewController.h"
 
-@implementation AppDelegate
+@implementation SpringsAppDelegate
 
 @synthesize window;
 
@@ -26,7 +26,7 @@
 	// Uncomment the following code if you Application only supports landscape mode
 	//
 #if GAME_AUTOROTATION == kGameAutorotationUIViewController
-
+    
 	CC_ENABLE_DEFAULT_GL_STATES();
 	CCDirector *director = [CCDirector sharedDirector];
 	CGSize size = [director winSize];
@@ -39,6 +39,7 @@
 	
 #endif // GAME_AUTOROTATION == kGameAutorotationUIViewController	
 }
+
 - (void) applicationDidFinishLaunching:(UIApplication*)application
 {
 	// Init the window
@@ -69,10 +70,10 @@
 	
 	// attach the openglView to the director
 	[director setOpenGLView:glView];
-	
-//	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-//	if( ! [director enableRetinaDisplay:YES] )
-//		CCLOG(@"Retina Display Not supported");
+    
+    //	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
+	if( ! [director enableRetinaDisplay:YES] )
+		CCLOG(@"Retina Display Not supported");
 	
 	//
 	// VERY IMPORTANT:
@@ -105,13 +106,12 @@
 	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
 	// You can change anytime.
 	[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
-
+    
 	
 	// Removes the startup flicker
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
-//	[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
 	[[CCDirector sharedDirector] runWithScene: [SpringScene scene]];
 }
 
@@ -125,27 +125,11 @@
 }
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
-	[[CCDirector sharedDirector] purgeCachedData];
-}
-
--(void) applicationDidEnterBackground:(UIApplication*)application {
-	[[CCDirector sharedDirector] stopAnimation];
-}
-
--(void) applicationWillEnterForeground:(UIApplication*)application {
-	[[CCDirector sharedDirector] startAnimation];
+	[[CCTextureCache sharedTextureCache] removeUnusedTextures];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-	CCDirector *director = [CCDirector sharedDirector];
-	
-	[[director openGLView] removeFromSuperview];
-	
-	[viewController release];
-	
-	[window release];
-	
-	[director end];	
+	[[CCDirector sharedDirector] end];
 }
 
 - (void)applicationSignificantTimeChange:(UIApplication *)application {
@@ -153,7 +137,7 @@
 }
 
 - (void)dealloc {
-	[[CCDirector sharedDirector] end];
+	[[CCDirector sharedDirector] release];
 	[window release];
 	[super dealloc];
 }
