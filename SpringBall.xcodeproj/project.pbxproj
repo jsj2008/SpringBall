@@ -2360,6 +2360,7 @@
 				GCC_PREFIX_HEADER = SpringBall/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = SpringBall/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"SpringBall/libs/Chipmunk/include/chipmunk\"";
@@ -2376,6 +2377,7 @@
 				GCC_PREFIX_HEADER = SpringBall/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = SpringBall/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"SpringBall/libs/Chipmunk/include/chipmunk\"";
