@@ -17,12 +17,6 @@
 		8C053CE113BD9FEA00D4520F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C053CE013BD9FEA00D4520F /* CoreGraphics.framework */; };
 		8C053CE513BD9FEA00D4520F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C053CE413BD9FEA00D4520F /* Default.png */; };
 		8C053CE713BD9FEA00D4520F /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C053CE613BD9FEA00D4520F /* fps_images.png */; };
-		8C053CE913BD9FEA00D4520F /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C053CE813BD9FEA00D4520F /* Icon-72.png */; };
-		8C053CEB13BD9FEA00D4520F /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C053CEA13BD9FEA00D4520F /* Icon-Small-50.png */; };
-		8C053CED13BD9FEA00D4520F /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C053CEC13BD9FEA00D4520F /* Icon-Small.png */; };
-		8C053CEF13BD9FEA00D4520F /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C053CEE13BD9FEA00D4520F /* Icon-Small@2x.png */; };
-		8C053CF113BD9FEA00D4520F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C053CF013BD9FEA00D4520F /* Icon.png */; };
-		8C053CF313BD9FEA00D4520F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C053CF213BD9FEA00D4520F /* Icon@2x.png */; };
 		8C053CF613BD9FEA00D4520F /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 8C053CF513BD9FEA00D4520F /* iTunesArtwork */; };
 		8C053CFB13BD9FEA00D4520F /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053CFA13BD9FEA00D4520F /* CCAction.m */; };
 		8C053CFE13BD9FEA00D4520F /* CCActionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053CFD13BD9FEA00D4520F /* CCActionCamera.m */; };
@@ -147,8 +141,6 @@
 		8C053E8F13BD9FEC00D4520F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053E8E13BD9FEC00D4520F /* main.m */; };
 		8C053E9213BD9FEC00D4520F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053E9113BD9FEC00D4520F /* AppDelegate.m */; };
 		8C053E9513BD9FEC00D4520F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053E9413BD9FEC00D4520F /* RootViewController.m */; };
-		8C053E9813BD9FEC00D4520F /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053E9713BD9FEC00D4520F /* HelloWorldLayer.m */; };
-		8C053E9B13BD9FED00D4520F /* grossini_dance_atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C053E9A13BD9FED00D4520F /* grossini_dance_atlas.png */; };
 		8C053ECB13BDA23900D4520F /* Arrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053EA213BDA23900D4520F /* Arrow.m */; };
 		8C053ECC13BDA23900D4520F /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053EA413BDA23900D4520F /* Ball.m */; };
 		8C053ECD13BDA23900D4520F /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053EA613BDA23900D4520F /* Common.m */; };
@@ -165,7 +157,6 @@
 		8C053ED813BDA23900D4520F /* Saw.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053EBC13BDA23900D4520F /* Saw.m */; };
 		8C053ED913BDA23900D4520F /* Screw.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053EBE13BDA23900D4520F /* Screw.m */; };
 		8C053EDA13BDA23900D4520F /* Spike.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053EC013BDA23900D4520F /* Spike.m */; };
-		8C053EDB13BDA23900D4520F /* SpringsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053EC213BDA23900D4520F /* SpringsAppDelegate.m */; };
 		8C053EDC13BDA23900D4520F /* SpringScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053EC413BDA23900D4520F /* SpringScene.m */; };
 		8C053EDD13BDA23900D4520F /* Star.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053EC613BDA23900D4520F /* Star.m */; };
 		8C053EDE13BDA23900D4520F /* Teleport.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C053EC813BDA23900D4520F /* Teleport.m */; };
@@ -416,12 +407,6 @@
 		8C053CE013BD9FEA00D4520F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8C053CE413BD9FEA00D4520F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		8C053CE613BD9FEA00D4520F /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
-		8C053CE813BD9FEA00D4520F /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Icon-72.png"; sourceTree = "<group>"; };
-		8C053CEA13BD9FEA00D4520F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Icon-Small-50.png"; sourceTree = "<group>"; };
-		8C053CEC13BD9FEA00D4520F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Resources/Icon-Small.png"; sourceTree = "<group>"; };
-		8C053CEE13BD9FEA00D4520F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Resources/Icon-Small@2x.png"; sourceTree = "<group>"; };
-		8C053CF013BD9FEA00D4520F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
-		8C053CF213BD9FEA00D4520F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
 		8C053CF413BD9FEA00D4520F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		8C053CF513BD9FEA00D4520F /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
 		8C053CF913BD9FEA00D4520F /* CCAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCAction.h; path = libs/cocos2d/CCAction.h; sourceTree = "<group>"; };
@@ -697,10 +682,7 @@
 		8C053E9113BD9FEC00D4520F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8C053E9313BD9FEC00D4520F /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		8C053E9413BD9FEC00D4520F /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		8C053E9613BD9FEC00D4520F /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		8C053E9713BD9FEC00D4520F /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		8C053E9913BD9FEC00D4520F /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
-		8C053E9A13BD9FED00D4520F /* grossini_dance_atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grossini_dance_atlas.png; path = Resources/grossini_dance_atlas.png; sourceTree = "<group>"; };
 		8C053EA113BDA23900D4520F /* Arrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arrow.h; sourceTree = "<group>"; };
 		8C053EA213BDA23900D4520F /* Arrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arrow.m; sourceTree = "<group>"; };
 		8C053EA313BDA23900D4520F /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
@@ -733,8 +715,6 @@
 		8C053EBE13BDA23900D4520F /* Screw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Screw.m; sourceTree = "<group>"; };
 		8C053EBF13BDA23900D4520F /* Spike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spike.h; sourceTree = "<group>"; };
 		8C053EC013BDA23900D4520F /* Spike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spike.m; sourceTree = "<group>"; };
-		8C053EC113BDA23900D4520F /* SpringsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringsAppDelegate.h; sourceTree = "<group>"; };
-		8C053EC213BDA23900D4520F /* SpringsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringsAppDelegate.m; sourceTree = "<group>"; };
 		8C053EC313BDA23900D4520F /* SpringScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringScene.h; sourceTree = "<group>"; };
 		8C053EC413BDA23900D4520F /* SpringScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringScene.m; sourceTree = "<group>"; };
 		8C053EC513BDA23900D4520F /* Star.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Star.h; sourceTree = "<group>"; };
@@ -1064,8 +1044,6 @@
 				8C053EBE13BDA23900D4520F /* Screw.m */,
 				8C053EBF13BDA23900D4520F /* Spike.h */,
 				8C053EC013BDA23900D4520F /* Spike.m */,
-				8C053EC113BDA23900D4520F /* SpringsAppDelegate.h */,
-				8C053EC213BDA23900D4520F /* SpringsAppDelegate.m */,
 				8C053EC313BDA23900D4520F /* SpringScene.h */,
 				8C053EC413BDA23900D4520F /* SpringScene.m */,
 				8C053EC513BDA23900D4520F /* Star.h */,
@@ -1078,8 +1056,6 @@
 				8C053E9113BD9FEC00D4520F /* AppDelegate.m */,
 				8C053E9313BD9FEC00D4520F /* RootViewController.h */,
 				8C053E9413BD9FEC00D4520F /* RootViewController.m */,
-				8C053E9613BD9FEC00D4520F /* HelloWorldLayer.h */,
-				8C053E9713BD9FEC00D4520F /* HelloWorldLayer.m */,
 				8C053E9913BD9FEC00D4520F /* GameConfig.h */,
 				8C053CE313BD9FEA00D4520F /* Resources */,
 				8C053CF713BD9FEA00D4520F /* libs */,
@@ -1144,15 +1120,7 @@
 				8C05409213BDA6E400D4520F /* star.png */,
 				8C053CE413BD9FEA00D4520F /* Default.png */,
 				8C053CE613BD9FEA00D4520F /* fps_images.png */,
-				8C053CE813BD9FEA00D4520F /* Icon-72.png */,
-				8C053CEA13BD9FEA00D4520F /* Icon-Small-50.png */,
-				8C053CEC13BD9FEA00D4520F /* Icon-Small.png */,
-				8C053CEE13BD9FEA00D4520F /* Icon-Small@2x.png */,
-				8C053CF013BD9FEA00D4520F /* Icon.png */,
-				8C053CF213BD9FEA00D4520F /* Icon@2x.png */,
-				8C053CF413BD9FEA00D4520F /* Info.plist */,
 				8C053CF513BD9FEA00D4520F /* iTunesArtwork */,
-				8C053E9A13BD9FED00D4520F /* grossini_dance_atlas.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1570,6 +1538,7 @@
 		8C053E8C13BD9FEC00D4520F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8C053CF413BD9FEA00D4520F /* Info.plist */,
 				8C053E8D13BD9FEC00D4520F /* Prefix.pch */,
 				8C053E8E13BD9FEC00D4520F /* main.m */,
 			);
@@ -1829,14 +1798,7 @@
 			files = (
 				8C053CE513BD9FEA00D4520F /* Default.png in Resources */,
 				8C053CE713BD9FEA00D4520F /* fps_images.png in Resources */,
-				8C053CE913BD9FEA00D4520F /* Icon-72.png in Resources */,
-				8C053CEB13BD9FEA00D4520F /* Icon-Small-50.png in Resources */,
-				8C053CED13BD9FEA00D4520F /* Icon-Small.png in Resources */,
-				8C053CEF13BD9FEA00D4520F /* Icon-Small@2x.png in Resources */,
-				8C053CF113BD9FEA00D4520F /* Icon.png in Resources */,
-				8C053CF313BD9FEA00D4520F /* Icon@2x.png in Resources */,
 				8C053CF613BD9FEA00D4520F /* iTunesArtwork in Resources */,
-				8C053E9B13BD9FED00D4520F /* grossini_dance_atlas.png in Resources */,
 				8C053EE413BDA49E00D4520F /* level_pattern.plist in Resources */,
 				8C053EE513BDA49E00D4520F /* dist.plist in Resources */,
 				8C053EE613BDA49E00D4520F /* params.plist in Resources */,
@@ -2202,7 +2164,6 @@
 				8C053E8F13BD9FEC00D4520F /* main.m in Sources */,
 				8C053E9213BD9FEC00D4520F /* AppDelegate.m in Sources */,
 				8C053E9513BD9FEC00D4520F /* RootViewController.m in Sources */,
-				8C053E9813BD9FEC00D4520F /* HelloWorldLayer.m in Sources */,
 				8C053ECB13BDA23900D4520F /* Arrow.m in Sources */,
 				8C053ECC13BDA23900D4520F /* Ball.m in Sources */,
 				8C053ECD13BDA23900D4520F /* Common.m in Sources */,
@@ -2219,7 +2180,6 @@
 				8C053ED813BDA23900D4520F /* Saw.m in Sources */,
 				8C053ED913BDA23900D4520F /* Screw.m in Sources */,
 				8C053EDA13BDA23900D4520F /* Spike.m in Sources */,
-				8C053EDB13BDA23900D4520F /* SpringsAppDelegate.m in Sources */,
 				8C053EDC13BDA23900D4520F /* SpringScene.m in Sources */,
 				8C053EDD13BDA23900D4520F /* Star.m in Sources */,
 				8C053EDE13BDA23900D4520F /* Teleport.m in Sources */,
