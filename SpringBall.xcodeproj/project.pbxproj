@@ -393,6 +393,37 @@
 		8C0540B913BDA6E500D4520F /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C05409013BDA6E400D4520F /* fps_images.png */; };
 		8C0540BA13BDA6E500D4520F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C05409113BDA6E400D4520F /* Icon.png */; };
 		8C0540BB13BDA6E500D4520F /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C05409213BDA6E400D4520F /* star.png */; };
+		8C9B947813BDD4F200ACA551 /* level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B945913BDD4F200ACA551 /* level1.plist */; };
+		8C9B947913BDD4F200ACA551 /* level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B945A13BDD4F200ACA551 /* level2.plist */; };
+		8C9B947A13BDD4F200ACA551 /* level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B945B13BDD4F200ACA551 /* level3.plist */; };
+		8C9B947B13BDD4F200ACA551 /* level4.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B945C13BDD4F200ACA551 /* level4.plist */; };
+		8C9B947C13BDD4F200ACA551 /* level5.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B945D13BDD4F200ACA551 /* level5.plist */; };
+		8C9B947D13BDD4F200ACA551 /* level6.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B945E13BDD4F200ACA551 /* level6.plist */; };
+		8C9B947E13BDD4F200ACA551 /* level7.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B945F13BDD4F200ACA551 /* level7.plist */; };
+		8C9B947F13BDD4F200ACA551 /* level8.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946013BDD4F200ACA551 /* level8.plist */; };
+		8C9B948013BDD4F200ACA551 /* level9.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946113BDD4F200ACA551 /* level9.plist */; };
+		8C9B948113BDD4F200ACA551 /* level10.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946213BDD4F200ACA551 /* level10.plist */; };
+		8C9B948213BDD4F200ACA551 /* level11.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946313BDD4F200ACA551 /* level11.plist */; };
+		8C9B948313BDD4F200ACA551 /* level12.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946413BDD4F200ACA551 /* level12.plist */; };
+		8C9B948413BDD4F200ACA551 /* level13.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946513BDD4F200ACA551 /* level13.plist */; };
+		8C9B948513BDD4F200ACA551 /* level14.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946613BDD4F200ACA551 /* level14.plist */; };
+		8C9B948613BDD4F200ACA551 /* level15.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946713BDD4F200ACA551 /* level15.plist */; };
+		8C9B948713BDD4F200ACA551 /* level16.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946813BDD4F200ACA551 /* level16.plist */; };
+		8C9B948813BDD4F200ACA551 /* level17.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946913BDD4F200ACA551 /* level17.plist */; };
+		8C9B948913BDD4F200ACA551 /* level18.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946A13BDD4F200ACA551 /* level18.plist */; };
+		8C9B948A13BDD4F200ACA551 /* level19.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946B13BDD4F200ACA551 /* level19.plist */; };
+		8C9B948B13BDD4F200ACA551 /* level20.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946C13BDD4F200ACA551 /* level20.plist */; };
+		8C9B948C13BDD4F200ACA551 /* level21.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946D13BDD4F200ACA551 /* level21.plist */; };
+		8C9B948D13BDD4F200ACA551 /* level22.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946E13BDD4F200ACA551 /* level22.plist */; };
+		8C9B948E13BDD4F200ACA551 /* level23.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B946F13BDD4F200ACA551 /* level23.plist */; };
+		8C9B948F13BDD4F200ACA551 /* level24.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B947013BDD4F200ACA551 /* level24.plist */; };
+		8C9B949013BDD4F200ACA551 /* level25.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B947113BDD4F200ACA551 /* level25.plist */; };
+		8C9B949113BDD4F200ACA551 /* level26.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B947213BDD4F200ACA551 /* level26.plist */; };
+		8C9B949213BDD4F200ACA551 /* level27.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B947313BDD4F200ACA551 /* level27.plist */; };
+		8C9B949313BDD4F200ACA551 /* level28.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B947413BDD4F200ACA551 /* level28.plist */; };
+		8C9B949413BDD4F200ACA551 /* level29.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B947513BDD4F200ACA551 /* level29.plist */; };
+		8C9B949513BDD4F200ACA551 /* level30.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B947613BDD4F200ACA551 /* level30.plist */; };
+		8C9B949613BDD4F200ACA551 /* level73.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B947713BDD4F200ACA551 /* level73.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -955,6 +986,37 @@
 		8C05409013BDA6E400D4520F /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
 		8C05409113BDA6E400D4520F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		8C05409213BDA6E400D4520F /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		8C9B945913BDD4F200ACA551 /* level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level1.plist; sourceTree = "<group>"; };
+		8C9B945A13BDD4F200ACA551 /* level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level2.plist; sourceTree = "<group>"; };
+		8C9B945B13BDD4F200ACA551 /* level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level3.plist; sourceTree = "<group>"; };
+		8C9B945C13BDD4F200ACA551 /* level4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level4.plist; sourceTree = "<group>"; };
+		8C9B945D13BDD4F200ACA551 /* level5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level5.plist; sourceTree = "<group>"; };
+		8C9B945E13BDD4F200ACA551 /* level6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level6.plist; sourceTree = "<group>"; };
+		8C9B945F13BDD4F200ACA551 /* level7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level7.plist; sourceTree = "<group>"; };
+		8C9B946013BDD4F200ACA551 /* level8.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level8.plist; sourceTree = "<group>"; };
+		8C9B946113BDD4F200ACA551 /* level9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level9.plist; sourceTree = "<group>"; };
+		8C9B946213BDD4F200ACA551 /* level10.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level10.plist; sourceTree = "<group>"; };
+		8C9B946313BDD4F200ACA551 /* level11.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level11.plist; sourceTree = "<group>"; };
+		8C9B946413BDD4F200ACA551 /* level12.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level12.plist; sourceTree = "<group>"; };
+		8C9B946513BDD4F200ACA551 /* level13.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level13.plist; sourceTree = "<group>"; };
+		8C9B946613BDD4F200ACA551 /* level14.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level14.plist; sourceTree = "<group>"; };
+		8C9B946713BDD4F200ACA551 /* level15.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level15.plist; sourceTree = "<group>"; };
+		8C9B946813BDD4F200ACA551 /* level16.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level16.plist; sourceTree = "<group>"; };
+		8C9B946913BDD4F200ACA551 /* level17.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level17.plist; sourceTree = "<group>"; };
+		8C9B946A13BDD4F200ACA551 /* level18.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level18.plist; sourceTree = "<group>"; };
+		8C9B946B13BDD4F200ACA551 /* level19.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level19.plist; sourceTree = "<group>"; };
+		8C9B946C13BDD4F200ACA551 /* level20.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level20.plist; sourceTree = "<group>"; };
+		8C9B946D13BDD4F200ACA551 /* level21.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level21.plist; sourceTree = "<group>"; };
+		8C9B946E13BDD4F200ACA551 /* level22.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level22.plist; sourceTree = "<group>"; };
+		8C9B946F13BDD4F200ACA551 /* level23.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level23.plist; sourceTree = "<group>"; };
+		8C9B947013BDD4F200ACA551 /* level24.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level24.plist; sourceTree = "<group>"; };
+		8C9B947113BDD4F200ACA551 /* level25.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level25.plist; sourceTree = "<group>"; };
+		8C9B947213BDD4F200ACA551 /* level26.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level26.plist; sourceTree = "<group>"; };
+		8C9B947313BDD4F200ACA551 /* level27.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level27.plist; sourceTree = "<group>"; };
+		8C9B947413BDD4F200ACA551 /* level28.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level28.plist; sourceTree = "<group>"; };
+		8C9B947513BDD4F200ACA551 /* level29.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level29.plist; sourceTree = "<group>"; };
+		8C9B947613BDD4F200ACA551 /* level30.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level30.plist; sourceTree = "<group>"; };
+		8C9B947713BDD4F200ACA551 /* level73.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = level73.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1548,6 +1610,37 @@
 		8C053EE013BDA48300D4520F /* plists */ = {
 			isa = PBXGroup;
 			children = (
+				8C9B945913BDD4F200ACA551 /* level1.plist */,
+				8C9B945A13BDD4F200ACA551 /* level2.plist */,
+				8C9B945B13BDD4F200ACA551 /* level3.plist */,
+				8C9B945C13BDD4F200ACA551 /* level4.plist */,
+				8C9B945D13BDD4F200ACA551 /* level5.plist */,
+				8C9B945E13BDD4F200ACA551 /* level6.plist */,
+				8C9B945F13BDD4F200ACA551 /* level7.plist */,
+				8C9B946013BDD4F200ACA551 /* level8.plist */,
+				8C9B946113BDD4F200ACA551 /* level9.plist */,
+				8C9B946213BDD4F200ACA551 /* level10.plist */,
+				8C9B946313BDD4F200ACA551 /* level11.plist */,
+				8C9B946413BDD4F200ACA551 /* level12.plist */,
+				8C9B946513BDD4F200ACA551 /* level13.plist */,
+				8C9B946613BDD4F200ACA551 /* level14.plist */,
+				8C9B946713BDD4F200ACA551 /* level15.plist */,
+				8C9B946813BDD4F200ACA551 /* level16.plist */,
+				8C9B946913BDD4F200ACA551 /* level17.plist */,
+				8C9B946A13BDD4F200ACA551 /* level18.plist */,
+				8C9B946B13BDD4F200ACA551 /* level19.plist */,
+				8C9B946C13BDD4F200ACA551 /* level20.plist */,
+				8C9B946D13BDD4F200ACA551 /* level21.plist */,
+				8C9B946E13BDD4F200ACA551 /* level22.plist */,
+				8C9B946F13BDD4F200ACA551 /* level23.plist */,
+				8C9B947013BDD4F200ACA551 /* level24.plist */,
+				8C9B947113BDD4F200ACA551 /* level25.plist */,
+				8C9B947213BDD4F200ACA551 /* level26.plist */,
+				8C9B947313BDD4F200ACA551 /* level27.plist */,
+				8C9B947413BDD4F200ACA551 /* level28.plist */,
+				8C9B947513BDD4F200ACA551 /* level29.plist */,
+				8C9B947613BDD4F200ACA551 /* level30.plist */,
+				8C9B947713BDD4F200ACA551 /* level73.plist */,
 				8C053EE113BDA49E00D4520F /* level_pattern.plist */,
 				8C053EE213BDA49E00D4520F /* dist.plist */,
 				8C053EE313BDA49E00D4520F /* params.plist */,
@@ -2031,6 +2124,37 @@
 				8C0540B913BDA6E500D4520F /* fps_images.png in Resources */,
 				8C0540BA13BDA6E500D4520F /* Icon.png in Resources */,
 				8C0540BB13BDA6E500D4520F /* star.png in Resources */,
+				8C9B947813BDD4F200ACA551 /* level1.plist in Resources */,
+				8C9B947913BDD4F200ACA551 /* level2.plist in Resources */,
+				8C9B947A13BDD4F200ACA551 /* level3.plist in Resources */,
+				8C9B947B13BDD4F200ACA551 /* level4.plist in Resources */,
+				8C9B947C13BDD4F200ACA551 /* level5.plist in Resources */,
+				8C9B947D13BDD4F200ACA551 /* level6.plist in Resources */,
+				8C9B947E13BDD4F200ACA551 /* level7.plist in Resources */,
+				8C9B947F13BDD4F200ACA551 /* level8.plist in Resources */,
+				8C9B948013BDD4F200ACA551 /* level9.plist in Resources */,
+				8C9B948113BDD4F200ACA551 /* level10.plist in Resources */,
+				8C9B948213BDD4F200ACA551 /* level11.plist in Resources */,
+				8C9B948313BDD4F200ACA551 /* level12.plist in Resources */,
+				8C9B948413BDD4F200ACA551 /* level13.plist in Resources */,
+				8C9B948513BDD4F200ACA551 /* level14.plist in Resources */,
+				8C9B948613BDD4F200ACA551 /* level15.plist in Resources */,
+				8C9B948713BDD4F200ACA551 /* level16.plist in Resources */,
+				8C9B948813BDD4F200ACA551 /* level17.plist in Resources */,
+				8C9B948913BDD4F200ACA551 /* level18.plist in Resources */,
+				8C9B948A13BDD4F200ACA551 /* level19.plist in Resources */,
+				8C9B948B13BDD4F200ACA551 /* level20.plist in Resources */,
+				8C9B948C13BDD4F200ACA551 /* level21.plist in Resources */,
+				8C9B948D13BDD4F200ACA551 /* level22.plist in Resources */,
+				8C9B948E13BDD4F200ACA551 /* level23.plist in Resources */,
+				8C9B948F13BDD4F200ACA551 /* level24.plist in Resources */,
+				8C9B949013BDD4F200ACA551 /* level25.plist in Resources */,
+				8C9B949113BDD4F200ACA551 /* level26.plist in Resources */,
+				8C9B949213BDD4F200ACA551 /* level27.plist in Resources */,
+				8C9B949313BDD4F200ACA551 /* level28.plist in Resources */,
+				8C9B949413BDD4F200ACA551 /* level29.plist in Resources */,
+				8C9B949513BDD4F200ACA551 /* level30.plist in Resources */,
+				8C9B949613BDD4F200ACA551 /* level73.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 #import "GameConfig.h"
 #import "RootViewController.h"
-#import "SpringScene.h"
+#import "LevelScene1.h"
 
 @implementation AppDelegate
 
@@ -70,8 +70,8 @@
 	[director setOpenGLView:glView];
 	
 //	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-	if( ! [director enableRetinaDisplay:YES] )
-		CCLOG(@"Retina Display Not supported");
+//	if( ! [director enableRetinaDisplay:YES] )
+//		CCLOG(@"Retina Display Not supported");
 	
 	//
 	// VERY IMPORTANT:
@@ -111,7 +111,7 @@
 	
 	// Run the intro Scene
 //	[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
-	[[CCDirector sharedDirector] runWithScene: [SpringScene scene]];
+	[[CCDirector sharedDirector] runWithScene: [LevelScene1 scene]];
 }
 
 
