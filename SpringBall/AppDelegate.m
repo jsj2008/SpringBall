@@ -12,6 +12,7 @@
 #import "GameConfig.h"
 #import "RootViewController.h"
 #import "LevelScene1.h"
+#import "MenuLayer.h"
 
 @implementation AppDelegate
 
@@ -111,7 +112,8 @@
 	
 	// Run the intro Scene
 //	[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
-	[[CCDirector sharedDirector] runWithScene: [LevelScene1 scene]];
+//	[[CCDirector sharedDirector] runWithScene: [LevelScene1 scene]];
+	[[CCDirector sharedDirector] runWithScene: [MenuLayer scene]];
 }
 
 
