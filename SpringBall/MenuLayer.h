@@ -17,6 +17,7 @@
 
 - (void) startBt;
 - (void) helpBt;
+- (void) scoreBt;
 - (void) soundBt: (id) sender;
 
 @end

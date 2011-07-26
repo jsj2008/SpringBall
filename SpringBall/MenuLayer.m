@@ -37,10 +37,13 @@
         [self addChild:bg z:0];
         
         CCMenuItemImage* itemStart = [CCMenuItemImage itemFromNormalImage:@"s_start.png" selectedImage:@"s_start_activ.png" target:self selector:@selector(startBt)];
-        itemStart.position = ccp(66, size.height / 2 - 10);
+        itemStart.position = ccp(66, size.height / 2 - 0);
 
         CCMenuItemImage* itemHelp = [CCMenuItemImage itemFromNormalImage:@"s_help.png" selectedImage:@"s_help_activ.png" target:self selector:@selector(helpBt)];
-        itemHelp.position = ccp(52, size.height / 2 - 80);
+        itemHelp.position = ccp(52, size.height / 2 - 60);
+
+        CCMenuItemImage* itemScore = [CCMenuItemImage itemFromNormalImage:@"s_score.png" selectedImage:@"s_score_activ.png" target:self selector:@selector(scoreBt)];
+        itemScore.position = ccp(55, size.height / 2 - 130);
 
         CCMenuItemImage* itemSoundOn = [CCMenuItemImage itemFromNormalImage:@"s_sound_ON.png" selectedImage:@"s_sound_ON.png" target:nil selector:nil];
         CCMenuItemImage* itemSoundOff = [CCMenuItemImage itemFromNormalImage:@"s_sound_OFF.png" selectedImage:@"s_sound_OFF.png" target:nil selector:nil];
@@ -48,7 +51,7 @@
         
         itemSound.position = ccp(30, size.height / 2 + 130);
 
-        CCMenu* menu = [CCMenu menuWithItems:itemStart, itemHelp, itemSound, nil];
+        CCMenu* menu = [CCMenu menuWithItems:itemStart, itemHelp, itemScore, itemSound, nil];
         menu.position = ccp(0,0);
         [self addChild: menu z:4];
         
@@ -63,6 +66,10 @@
 }
 
 - (void) helpBt {
+    
+}
+
+- (void) scoreBt {
     
 }
 

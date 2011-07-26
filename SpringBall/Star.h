@@ -15,6 +15,7 @@
 	id fluct;
 	id goout;
 	bool active;
+    id anm_star;
 }
 
 - (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space;

@@ -49,7 +49,7 @@
             default:
                 break;
         }
-		sprite = [CCSprite spriteWithFile:@"2.png"];
+		sprite = [CCSprite spriteWithFile:[NSString stringWithFormat:@"%@%d.png", aname, 1]];
 		sprite.position = pos;//ccp(240, 160);
 		[lr addChild:sprite z:5];
 		
@@ -308,7 +308,7 @@
 			float kf = 1.0f;
 			do {
 				shadow[pst].scale = kf;
-				shadow[pst].opacity = 150 * kf; //255 * kf;
+				shadow[pst].opacity = 190 * kf; //255 * kf;
 				kf *= [Common instance].tailfadeout;
 				pst--;
 				if(pst < 0)
