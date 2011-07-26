@@ -83,7 +83,7 @@
 		for( int j = 1; j <= 5; j++)
 			[anim2 addFrameWithFilename:[NSString stringWithFormat:@"%@smert_%d.png", aname, j]];
 		anm_vzr = [[CCSequence actions:
-						[CCAnimate actionWithAnimation: anim2],
+						[CCAnimate actionWithAnimation: anim2 restoreOriginalFrame:NO],
 						[CCCallFunc actionWithTarget:self selector:@selector(vzrCallback)],
 						nil]retain];
 		
@@ -197,7 +197,7 @@
 
 - (void) vzrCallback {
 	
-	sprite.visible = NO;
+//	sprite.visible = NO;
 }
 
 - (void) die {

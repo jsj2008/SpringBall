@@ -44,7 +44,7 @@
         
 		fluct = [[CCRepeatForever actionWithAction:[CCSequence actions:
 														[CCScaleTo actionWithDuration:1.0f scale:0.5f],
-													    [CCScaleTo actionWithDuration:1.0f scale:1.5f],
+													    [CCScaleTo actionWithDuration:1.0f scale:1.0f],
 														nil]]retain];
 		[sprite runAction:fluct];
         

@@ -29,7 +29,7 @@
 		sprite.position = ccp(-500, -500);
 		[lr addChild:sprite];	
 
-		id anim1 = [CCAnimation animationWithName:@"weakwind" delay:0.1f];
+		id anim1 = [CCAnimation animationWithName:@"weakwind" delay:0.03f];
 		for( int j = 1; j <= 10; j++)
 			[anim1 addFrameWithFilename:[NSString stringWithFormat:@"wing_weak_%d.png", j]];
 

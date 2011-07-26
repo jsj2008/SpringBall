@@ -303,7 +303,7 @@ static void eachShape(void* ptr, void* unused) {
 		
 		[[Common instance] setLayer:self];
 		
-		CCSprite* bg = [CCSprite spriteWithFile:@"background.PNG"];
+		CCSprite* bg = [CCSprite spriteWithFile:@"levil_1.png"];
 		bg.position = ccp(240, 160);
 		[self addChild:bg z:0];		
 
