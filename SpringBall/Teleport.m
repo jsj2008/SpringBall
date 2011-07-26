@@ -26,7 +26,7 @@
 		number = num;
 		active = YES;
 		
-		sprite = [CCSprite spriteWithFile:@"teleport.png"];
+		sprite = [CCSprite spriteWithFile:@"tport.png"];
 		sprite.position = ccp(-500, -500);
 		[lr addChild:sprite];	
 		

@@ -30,8 +30,8 @@
 		[lr addChild:sprite];	
 
 		id anim1 = [CCAnimation animationWithName:@"weakwind" delay:0.1f];
-		for( int j = 1; j <= 8; j++)
-			[anim1 addFrameWithFilename:[NSString stringWithFormat:@"weakwind%d.png", j]];
+		for( int j = 1; j <= 10; j++)
+			[anim1 addFrameWithFilename:[NSString stringWithFormat:@"wing_weak_%d.png", j]];
 
 		id anim2 = [CCAnimation animationWithName:@"strongwind" delay:0.3f];
 		for( int j = 1; j <= 4; j++)
