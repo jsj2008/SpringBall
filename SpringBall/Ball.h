@@ -29,7 +29,7 @@ enum BallStatus {BS_ONSTART, BS_ONFINISH, BS_FREE, BS_DIED, BS_ONWIND, BS_HYPER}
 
 @property (readonly) int status;
 
-- (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space pos:(CGPoint)pos;
+- (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space pos:(CGPoint)pos color:(int)color;
 - (bool) isFree;
 - (bool) canGo;
 - (bool) isHyper;

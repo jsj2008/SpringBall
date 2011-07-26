@@ -631,13 +631,18 @@ static void eachShape(void* ptr, void* unused) {
 	
 //	ls->ballsnum = 0;
 	int h = 0;
+    int col = BC_BLUE;
 	for(int j = 0; j < ls->start_count; j++) {
 //		MassBody* w = [[Common instance] getStart:j];
 //		ls->ballsnum += ls->istart[j].balls;
 		for(int i = 0; i < ls->istart[j].balls/*ls->balls_num*/; i++) {
-			int randx = 25 - CCRANDOM_0_1() * 50;
+			
+            int randx = 25 - CCRANDOM_0_1() * 50;
 			int randy = 0;
-			ball[h++/*i*/] = [[Ball alloc]initWithParams:self space:space pos:ccp(randx + ls->istart[j].pos.x/*ls->start.x*/, randy + ls->istart[j].pos.y/*ls->start.y*/ + 20)];	
+			ball[h++/*i*/] = [[Ball alloc]initWithParams:self space:space pos:ccp(randx + ls->istart[j].pos.x/*ls->start.x*/, randy + ls->istart[j].pos.y/*ls->start.y*/ + 20) color:col];
+            col++;
+            if(col >= BC_MAX)
+                col = BC_BLUE;
 		}
 	}
 	ls->ballsnum = h;

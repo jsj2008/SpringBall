@@ -15,7 +15,7 @@
 
 @synthesize status;
 
-- (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space pos:(CGPoint)pos {
+- (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space pos:(CGPoint)pos color:(int)color {
 
 	self = [super init];
 	
@@ -26,12 +26,37 @@
 			
 		status = BS_FREE;
 
+        NSString* aname = @"ball_blue_";
+        
+        switch (color) {
+            
+            case BC_BLUE:
+                aname = @"ball_blue_";
+                break;
+            case BC_GREEN:
+                aname = @"ball_green_";
+                break;
+            case BC_RED:
+                aname = @"ball_red_";
+                break;
+            case BC_VIOLET:
+                aname = @"ball_violet_";
+                break;
+            case BC_YELLOW:
+                aname = @"ball_yellow_";
+                break;
+                
+            default:
+                break;
+        }
 		sprite = [CCSprite spriteWithFile:@"2.png"];
 		sprite.position = pos;//ccp(240, 160);
 		[lr addChild:sprite z:5];
 		
 		for(int i = 0; i <  [Common instance].tailcount; i++) {
-			shadow[i] = [CCSprite spriteWithFile:@"70.png"];
+            
+//			shadow[i] = [CCSprite spriteWithFile:@"70.png"];
+			shadow[i] = [CCSprite spriteWithFile:[NSString stringWithFormat:@"%@shleif.png", aname]];
 			shadow[i].position = pos;
 			shadow[i].opacity = 0;
 			//[shadow[i] runAction:[CCFadeOut actionWithDuration:0.001f]];
@@ -40,16 +65,23 @@
 		
 		shd_cnt = 0;
 
-		id anim1 = [CCAnimation animationWithName:@"ball" delay:0.3f + CCRANDOM_0_1() / 2];
-		for( int j = 1; j <= 2; j++)
-			[anim1 addFrameWithFilename:[NSString stringWithFormat:@"%d.png", j]];
+		id anim1 = [CCAnimation animationWithName:@"ball" delay:0.08f/* + CCRANDOM_0_1() / 2*/];
+//		for( int j = 1; j <= 2; j++)
+//			[anim1 addFrameWithFilename:[NSString stringWithFormat:@"%d.png", j]];
+		for( int j = 1; j <= 3; j++)
+			[anim1 addFrameWithFilename:[NSString stringWithFormat:@"%@%d.png", aname, j]];
 
-		anm_move = [[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation: anim1 restoreOriginalFrame:NO]]retain];
+        [anim1 addFrameWithFilename:[NSString stringWithFormat:@"%@%d.png", aname, 1]];
+
+//		id anim1 = [CCSequence actions:anim0, [CCDelayTime actionWithDuration:0.4f], nil];
+
+//		anm_move = [[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation: anim1 restoreOriginalFrame:NO]]retain];
+		anm_move = [[CCRepeatForever actionWithAction:[CCSequence actions:[CCAnimate actionWithAnimation: anim1 restoreOriginalFrame:NO], [CCDelayTime actionWithDuration:0.9f + CCRANDOM_0_1() / 2], nil]]retain];
 		[sprite runAction:anm_move];
 
-		id anim2 = [CCAnimation animationWithName:@"ballvzr" delay:0.3f];
-		for( int j = 1; j <= 4; j++)
-			[anim2 addFrameWithFilename:[NSString stringWithFormat:@"vzr%d.png", j]];
+		id anim2 = [CCAnimation animationWithName:@"ballvzr" delay:0.2f];
+		for( int j = 1; j <= 5; j++)
+			[anim2 addFrameWithFilename:[NSString stringWithFormat:@"%@smert_%d.png", aname, j]];
 		anm_vzr = [[CCSequence actions:
 						[CCAnimate actionWithAnimation: anim2],
 						[CCCallFunc actionWithTarget:self selector:@selector(vzrCallback)],
@@ -276,7 +308,7 @@
 			float kf = 1.0f;
 			do {
 				shadow[pst].scale = kf;
-				shadow[pst].opacity = 255 * kf;
+				shadow[pst].opacity = 150 * kf; //255 * kf;
 				kf *= [Common instance].tailfadeout;
 				pst--;
 				if(pst < 0)

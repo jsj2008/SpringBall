@@ -7,7 +7,7 @@
 //
 
 #import "MenuLayer.h"
-
+#import "LevelScene1.h"
 
 @implementation MenuLayer
 
@@ -59,6 +59,7 @@
 
 - (void) startBt {
     
+    [[CCDirector sharedDirector] replaceScene: [LevelScene1 scene]];
 }
 
 - (void) helpBt {
