@@ -17,4 +17,7 @@
 
 @property (nonatomic, retain) UIWindow *window;
 
+-(void) preloadSounds;
+-(void) unloadSounds;
+
 @end

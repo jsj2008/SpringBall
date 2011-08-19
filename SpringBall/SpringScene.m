@@ -6,8 +6,8 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import "SimpleAudioEngine.h"
 #import "SpringScene.h"
-
 #import "LevelScene1.h"
 
 static 	Ball* ball[MAX_BALLS_NUM];
@@ -302,7 +302,9 @@ static void eachShape(void* ptr, void* unused) {
 		ls = [LevelStruct alloc];
 		
 		[[Common instance] setLayer:self];
-		
+        
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"level_music.mp3" loop:YES];
+        
 		CCSprite* bg = [CCSprite spriteWithFile:@"background1.png"];
 		bg.position = ccp(240, 160);
 		[self addChild:bg z:0];		

@@ -6,6 +6,8 @@
 //  Copyright __MyCompanyName__ 2011. All rights reserved.
 //
 
+#import "SimpleAudioEngine.h"
+
 #import "cocos2d.h"
 
 #import "AppDelegate.h"
@@ -110,6 +112,8 @@
 	// Removes the startup flicker
 	[self removeStartupFlicker];
 	
+    [self preloadSounds];
+    
 	// Run the intro Scene
 //	[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
 //	[[CCDirector sharedDirector] runWithScene: [LevelScene1 scene]];
@@ -140,6 +144,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
 	CCDirector *director = [CCDirector sharedDirector];
 	
+    [self unloadSounds];
+
 	[[director openGLView] removeFromSuperview];
 	
 	[viewController release];
@@ -157,6 +163,16 @@
 	[[CCDirector sharedDirector] end];
 	[window release];
 	[super dealloc];
+}
+
+-(void) preloadSounds {
+    
+    [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"level_music.mp3"];    
+}
+
+-(void) unloadSounds {
+    
+//    [[SimpleAudioEngine sharedEngine] unloadEffect:<#(NSString *)#>];
 }
 
 @end
