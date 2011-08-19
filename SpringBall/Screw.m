@@ -20,7 +20,7 @@
 		sp = space;
 		lay = lr;
 		
-		sprite = [CCSprite spriteWithFile:@"platform0.PNG"];
+		sprite = [CCSprite spriteWithFile:@"platform2.png"];
 		sprite.position = ccp(-500, -500);
 		[lr addChild:sprite];	
 		

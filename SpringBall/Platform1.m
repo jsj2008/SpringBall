@@ -23,7 +23,8 @@
 		lay = lr;
 		angle = 0;
 		
-		sprite = [CCSprite spriteWithFile:@"platform_.png"];
+//		sprite = [CCSprite spriteWithFile:@"platform_.png"];
+		sprite = [CCSprite spriteWithFile:@"platform1.png"];
 		sprite.position = ccp(-500, -500);
 		[lr addChild:sprite];	
 		

@@ -1,17 +1,15 @@
 //
-//  Platform.m
-//  Springs
+//  Platform2.m
+//  BestJumps
 //
-//  Created by вадим on 3/24/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Created by naceka on 19.08.11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "Platform.h"
+#import "Platform2.h"
 
 
-@implementation Platform
-
-@synthesize angle;
+@implementation Platform2
 
 - (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space {	
 	
@@ -21,17 +19,16 @@
 		
 		sp = space;
 		lay = lr;
-		angle = 0;
 		
-		sprite = [CCSprite spriteWithFile:@"platform3.png"];
+		sprite = [CCSprite spriteWithFile:@"platform_grass.png"];
 		sprite.position = ccp(-500, -500);
 		[lr addChild:sprite];	
 		
 		cpVect verts[] = {
-			cpv(-13, -25),
-			cpv(-13, 25),
-			cpv( 13, 25),
-			cpv( 13, -25),
+			cpv(-58, -21),
+			cpv(-58, 21),
+			cpv( 58, 21),
+			cpv( 58, -21),
 		};
 		
 		body = cpBodyNew(1e10/*INFINITY*/, INFINITY);
@@ -41,7 +38,7 @@
 		shape->e = 1.0f;
 		shape->u = 1.0f;
 		shape->data = self;
-		shape->collision_type = CT_PLATFORM;
+		shape->collision_type = CT_PLATFORM2;
 		
 		cpSpaceAddShape(sp, shape);
 		
@@ -52,20 +49,8 @@
 	
 }
 - (void) dealloc {
-
+	
 	[super dealloc];
-}
-
-- (void) rotate90 {
-	angle += 45;//90;
-	if(angle > 315/*270*/)
-		angle = 0;
-	cpBodySetAngle(body, CC_DEGREES_TO_RADIANS(-angle));
-}
-
-- (void) setAngle: (cpFloat)a {
-	angle = a;
-	cpBodySetAngle(body, CC_DEGREES_TO_RADIANS(-angle));
 }
 
 - (CGRect) getRect {

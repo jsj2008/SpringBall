@@ -253,6 +253,22 @@ LevelStruct* ls = nil;
 	ls->iplatform1[c] = ls->iplatform1[ls->platform_count1];
 }
 
+- (void) setPlatform2: (Platform2*) w at:(int) c {
+	platform_array2[c] = w;
+}
+
+- (Platform2*) getPlatform2: (int) c {
+	return platform_array2[c];
+}
+
+- (void) deletePlatform2: (int) c {
+	
+	[platform_array2[c] release];
+	ls->platform_count2--;
+	platform_array2[c] = platform_array2[ls->platform_count2];
+	ls->iplatform2[c] = ls->iplatform2[ls->platform_count2];
+}
+
 
 - (void) setSaw: (Saw*) w at:(int) c {
 	saw_array[c] = w;
@@ -416,6 +432,13 @@ LevelStruct* ls = nil;
 		id obj = [[prms objectForKey:@"Platform1"] objectForKey:[NSString stringWithFormat:@"Item%d", i]];
 		parms->iplatform1[i].pos = ccp([[obj objectForKey:@"x"] intValue],[[obj objectForKey:@"y"] intValue]);
 		parms->iplatform1[i].angle = [[obj objectForKey:@"Angle"] intValue];
+	}
+
+	parms->platform_count2 = [[[prms objectForKey:@"Platform2"] objectForKey:@"Platform_count2"] intValue];
+	for(int i = 0; i < parms->platform_count2; i++) {
+		id obj = [[prms objectForKey:@"Platform2"] objectForKey:[NSString stringWithFormat:@"Item%d", i]];
+		parms->iplatform2[i].pos = ccp([[obj objectForKey:@"x"] intValue],[[obj objectForKey:@"y"] intValue]);
+//		parms->iplatform2[i].angle = [[obj objectForKey:@"Angle"] intValue];
 	}
 	
 	parms->saw_count = [[[prms objectForKey:@"Saw"] objectForKey:@"Saw_count"] intValue];
@@ -604,6 +627,32 @@ LevelStruct* ls = nil;
 			[obj setValue:[NSNumber numberWithInt:parms->iplatform1[i].angle] forKey:@"Angle"];
 			[obj setValue:[NSNumber numberWithInt:parms->iplatform1[i].pos.x] forKey:@"x"];
 			[obj setValue:[NSNumber numberWithInt:parms->iplatform1[i].pos.y] forKey:@"y"];		
+		}
+	}
+
+	[plistDict removeObjectForKey:@"Platform2"];
+	it = [NSMutableDictionary dictionaryWithObjects: [NSArray arrayWithObjects: [NSNumber numberWithInt:parms->platform_count2], nil]
+											forKeys:[NSArray arrayWithObjects: @"Platform_count2",	nil]];	
+	[plistDict setObject:it forKey:@"Platform2"]; 
+	id objp2 = [plistDict objectForKey:@"Platform2"];
+	for(int i = 0; i < parms->platform_count2; i++) {
+		id obj = [objp2 objectForKey:[NSString stringWithFormat:@"Item%d", i]];
+		if(!obj) {
+			NSDictionary *item = [NSDictionary dictionaryWithObjects: [NSArray arrayWithObjects:
+//																	   [NSNumber numberWithInt:parms->iplatform1[i].angle],
+																	   [NSNumber numberWithInt:parms->iplatform2[i].pos.x],
+																	   [NSNumber numberWithInt:parms->iplatform2[i].pos.y],
+																	   nil]
+															 forKeys:[NSArray arrayWithObjects:
+//																	  @"Angle",
+																	  @"x",
+																	  @"y",
+																	  nil]];
+			[objp2 setObject:item forKey:[NSString stringWithFormat:@"Item%d", i]]; 
+ 		} else {
+//			[obj setValue:[NSNumber numberWithInt:parms->iplatform1[i].angle] forKey:@"Angle"];
+			[obj setValue:[NSNumber numberWithInt:parms->iplatform2[i].pos.x] forKey:@"x"];
+			[obj setValue:[NSNumber numberWithInt:parms->iplatform2[i].pos.y] forKey:@"y"];		
 		}
 	}
 	

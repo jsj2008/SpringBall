@@ -2,14 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Star</key>
+	<key>Arrow</key>
 	<dict>
-		<key>Star_count</key>
+		<key>Arrow_count</key>
 		<integer>0</integer>
 	</dict>
-	<key>Screw</key>
+	<key>Finish</key>
 	<dict>
-		<key>Screw_count</key>
+		<key>Finish_count</key>
+		<integer>1</integer>
+		<key>Item0</key>
+		<dict>
+			<key>x</key>
+			<integer>80</integer>
+			<key>y</key>
+			<integer>80</integer>
+		</dict>
+	</dict>
+	<key>Hyper</key>
+	<dict>
+		<key>Hyper_count</key>
+		<integer>0</integer>
+	</dict>
+	<key>Nograv</key>
+	<dict>
+		<key>Nograv_count</key>
 		<integer>0</integer>
 	</dict>
 	<key>Platform</key>
@@ -22,19 +39,9 @@
 		<key>Platform_count1</key>
 		<integer>0</integer>
 	</dict>
-	<key>Teleport</key>
+	<key>Platform2</key>
 	<dict>
-		<key>Teleport_count</key>
-		<integer>0</integer>
-	</dict>
-	<key>Nograv</key>
-	<dict>
-		<key>Nograv_count</key>
-		<integer>0</integer>
-	</dict>
-	<key>Saw</key>
-	<dict>
-		<key>Saw_count</key>
+		<key>Platform_count2</key>
 		<integer>0</integer>
 	</dict>
 	<key>Repel</key>
@@ -42,25 +49,28 @@
 		<key>Repel_count</key>
 		<integer>0</integer>
 	</dict>
+	<key>Saw</key>
+	<dict>
+		<key>Saw_count</key>
+		<integer>0</integer>
+	</dict>
+	<key>Screw</key>
+	<dict>
+		<key>Screw_count</key>
+		<integer>0</integer>
+	</dict>
 	<key>Spike</key>
 	<dict>
 		<key>Spike_count</key>
 		<integer>0</integer>
 	</dict>
-	<key>Hyper</key>
+	<key>Star</key>
 	<dict>
-		<key>Hyper_count</key>
-		<integer>0</integer>
-	</dict>
-	<key>Arrow</key>
-	<dict>
-		<key>Arrow_count</key>
+		<key>Star_count</key>
 		<integer>0</integer>
 	</dict>
 	<key>Start</key>
 	<dict>
-		<key>Start_count</key>
-		<integer>1</integer>
 		<key>Item0</key>
 		<dict>
 			<key>Balls_count</key>
@@ -70,18 +80,13 @@
 			<key>y</key>
 			<integer>160</integer>
 		</dict>
-	</dict>
-	<key>Finish</key>
-	<dict>
-		<key>Item0</key>
-		<dict>
-			<key>y</key>
-			<integer>80</integer>
-			<key>x</key>
-			<integer>80</integer>
-		</dict>
-		<key>Finish_count</key>
+		<key>Start_count</key>
 		<integer>1</integer>
+	</dict>
+	<key>Teleport</key>
+	<dict>
+		<key>Teleport_count</key>
+		<integer>0</integer>
 	</dict>
 	<key>Transit</key>
 	<dict>

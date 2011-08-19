@@ -303,9 +303,13 @@ static void eachShape(void* ptr, void* unused) {
 		
 		[[Common instance] setLayer:self];
 		
-		CCSprite* bg = [CCSprite spriteWithFile:@"levil_1.png"];
+		CCSprite* bg = [CCSprite spriteWithFile:@"background1.png"];
 		bg.position = ccp(240, 160);
 		[self addChild:bg z:0];		
+
+		CCSprite* bgg = [CCSprite spriteWithFile:@"ground1.png"];
+		bgg.position = ccp(240, 31);
+		[self addChild:bgg z:6];		
 
 		direction_sprite = [CCSprite spriteWithFile:@"direction.png"];
 		[self addChild:direction_sprite z:5];
@@ -392,6 +396,7 @@ static void eachShape(void* ptr, void* unused) {
 		cpSpaceAddCollisionHandler(space, CT_WALL, CT_BALL, NULL, presolveWallBall, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_BALL, NULL, presolvePlatformBall, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_BALL, NULL, presolvePlatformBall1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_BALL, NULL, presolvePlatformBall1, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_PITSTOP, CT_PITSTOP, NULL, presolvePitPit, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_PITSTOP, CT_WALL, NULL, presolvePitWall, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_SHADOW, CT_WALL, NULL, presolveShadowWall, NULL, NULL, NULL);
@@ -422,6 +427,7 @@ static void eachShape(void* ptr, void* unused) {
 		cpSpaceAddCollisionHandler(space, CT_SCREW, CT_HYPER, NULL, presolveScrewHyper, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_SCREW, CT_PLATFORM, NULL, presolveScrewPlatform, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_SCREW, CT_PLATFORM1, NULL, presolveScrewPlatform1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SCREW, CT_PLATFORM2, NULL, presolveScrewPlatform1, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_SCREW, CT_TELEPORT, NULL, presolveScrewTeleport, NULL, NULL, NULL);
 
 		cpSpaceAddCollisionHandler(space, CT_STAR, CT_SAW, NULL, presolveStarSaw, NULL, NULL, NULL);
@@ -435,6 +441,7 @@ static void eachShape(void* ptr, void* unused) {
 		cpSpaceAddCollisionHandler(space, CT_STAR, CT_HYPER, NULL, presolveStarHyper, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_STAR, CT_PLATFORM, NULL, presolveStarPlatform, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_STAR, CT_PLATFORM1, NULL, presolveStarPlatform1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_STAR, CT_PLATFORM2, NULL, presolveStarPlatform1, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_STAR, CT_TELEPORT, NULL, presolveStarTeleport, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_STAR, CT_SCREW, NULL, presolveStarScrew, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_STAR, CT_STAR, NULL, presolveStarStar, NULL, NULL, NULL);
@@ -508,6 +515,8 @@ static void eachShape(void* ptr, void* unused) {
 		[[[Common instance] getPlatform:i] release];
 	for(int i = 0; i < ls->platform_count1; i++)
 		[[[Common instance] getPlatform1:i] release];
+	for(int i = 0; i < ls->platform_count2; i++)
+		[[[Common instance] getPlatform2:i] release];
 	for(int i = 0; i < ls->saw_count; i++)
 		[[[Common instance] getSaw:i] release];
 	for(int i = 0; i < ls->star_count; i++)
@@ -543,6 +552,8 @@ static void eachShape(void* ptr, void* unused) {
 		[[Common instance] setPlatform:[[Platform alloc]initWithParams:self space:space] at:i];
 	for(int i = 0; i < ls->platform_count1; i++)
 		[[Common instance] setPlatform1:[[Platform1 alloc]initWithParams:self space:space] at:i];
+	for(int i = 0; i < ls->platform_count2; i++)
+		[[Common instance] setPlatform2:[[Platform2 alloc]initWithParams:self space:space] at:i];
 	for(int i = 0; i < ls->saw_count; i++)
 		[[Common instance] setSaw:[[Saw alloc]initWithParams:self space:space] at:i];
 	for(int i = 0; i < ls->star_count; i++)
@@ -607,6 +618,12 @@ static void eachShape(void* ptr, void* unused) {
 		Platform1* w = [[Common instance] getPlatform1:i];
 		[w setPosition:ls->iplatform1[i].pos];
 		[w setAngle:ls->iplatform1[i].angle];
+	}
+
+	for(int i = 0; i < ls->platform_count2; i++) {
+		Platform2* w = [[Common instance] getPlatform2:i];
+		[w setPosition:ls->iplatform2[i].pos];
+//		[w setAngle:ls->iplatform2[i].angle];
 	}
 	
 	for(int i = 0; i < ls->saw_count; i++) {
@@ -893,6 +910,19 @@ static void eachShape(void* ptr, void* unused) {
 				decrement_counter = &ls->platform_count1;
 				break;
 			}
+			case EO_PLATFORM2: {
+				int i = ls->platform_count2 + 1;
+				if(i > MAX_PLATFORMCNT2)
+					break;
+				ls->platform_count2 = i;
+				Platform2* w = [[Platform2 alloc]initWithParams:self space:space];
+				[w setPosition:ccp(240,160)];
+				[[Common instance] setPlatform2:w at:i-1];
+				ls->iplatform2[i-1].pos = ccp(240,160);
+				obj_hanged = w;
+				decrement_counter = &ls->platform_count2;
+				break;
+			}
 			case EO_SAW: {
 				int i = ls->saw_count + 1;
 				if(i > MAX_SAWCNT)
@@ -1110,7 +1140,21 @@ static void eachShape(void* ptr, void* unused) {
 				return;
 			}
 		}
-		
+
+        for(int i = 0; i < ls->platform_count2; i++) {
+			Platform2* w = [[Common instance] getPlatform2:i];
+			sRect = [w getRect];
+			if(CGRectContainsPoint( sRect, convLocation )) {
+				if(tapCount == 2) {
+					[[Common instance] deletePlatform2:i];
+					[[Common instance] setLevelParams:level params:ls];
+				}
+				else
+					obj_selected = w;
+				return;
+			}
+		}
+
 		for(int i = 0; i < ls->saw_count; i++) {
 			Saw* w = [[Common instance] getSaw:i];
 			sRect = [w getRect];
@@ -1260,7 +1304,13 @@ static void eachShape(void* ptr, void* unused) {
 				ls->iplatform1[i].pos = w.sprite.position;
 				ls->iplatform1[i].angle = w.angle;
 			}
-			
+
+            for(int i = 0; i < ls->platform_count2; i++) {
+				Platform2* w = [[Common instance] getPlatform2:i];
+				ls->iplatform2[i].pos = w.sprite.position;
+//				ls->iplatform2[i].angle = w.angle;
+			}
+
 			for(int i = 0; i < ls->saw_count; i++) {
 				Saw* w = [[Common instance] getSaw:i];
 				ls->isaw[i] = w.sprite.position;
@@ -1327,6 +1377,8 @@ static void eachShape(void* ptr, void* unused) {
 		[[[Common instance] getPlatform:i] release];
 	for(int i = 0; i < ls->platform_count1; i++)
 		[[[Common instance] getPlatform1:i] release];
+	for(int i = 0; i < ls->platform_count2; i++)
+		[[[Common instance] getPlatform2:i] release];
 	for(int i = 0; i < ls->saw_count; i++)
 		[[[Common instance] getSaw:i] release];
 	for(int i = 0; i < ls->star_count; i++)

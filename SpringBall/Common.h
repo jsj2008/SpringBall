@@ -16,6 +16,7 @@
 #import "Nograv.h"
 #import "Platform.h"
 #import "Platform1.h"
+#import "Platform2.h"
 #import "Saw.h"
 #import "Star.h"
 #import "Teleport.h"
@@ -32,6 +33,7 @@
 #define MAX_NOGRAVCNT 2
 #define MAX_PLATFORMCNT 15
 #define MAX_PLATFORMCNT1 15
+#define MAX_PLATFORMCNT2 15
 #define MAX_SAWCNT 5
 #define MAX_STARCNT 15
 #define MAX_TELEPORTCNT 8
@@ -119,6 +121,8 @@ struct BPStruct {
 	struct APStruct iplatform[MAX_PLATFORMCNT];
 	int platform_count1;
 	struct APStruct iplatform1[MAX_PLATFORMCNT1];
+	int platform_count2;
+	struct APStruct iplatform2[MAX_PLATFORMCNT2];
 	int saw_count;
 	CGPoint isaw[MAX_SAWCNT];
 	int star_count;
@@ -171,6 +175,7 @@ extern LevelStruct* ls;
 	Nograv* nograv_array[MAX_NOGRAVCNT];
 	Platform* platform_array[MAX_PLATFORMCNT];
 	Platform1* platform_array1[MAX_PLATFORMCNT1];
+	Platform2* platform_array2[MAX_PLATFORMCNT2];
 	Saw* saw_array[MAX_SAWCNT];
 	Star* star_array[MAX_STARCNT];
 	Teleport* teleport_array[MAX_TELEPORTCNT];
@@ -240,6 +245,9 @@ extern LevelStruct* ls;
 - (void) setPlatform1: (Platform1*) w at:(int) c;
 - (Platform1*) getPlatform1: (int) c;
 - (void) deletePlatform1: (int) c;
+- (void) setPlatform2: (Platform2*) w at:(int) c;
+- (Platform2*) getPlatform2: (int) c;
+- (void) deletePlatform2: (int) c;
 - (void) setSaw: (Saw*) w at:(int) c;
 - (Saw*) getSaw: (int) c;
 - (void) deleteSaw: (int) c;

@@ -22,15 +22,21 @@
 		sp = space;
 		lay = lr;
 		
-		sprite = [CCSprite spriteWithFile:@"spikes_2.png"];
+		sprite = [CCSprite spriteWithFile:@"spikes.png"];
 		sprite.position = ccp(-500, -500);
 		[lr addChild:sprite];	
 		
-		cpVect verts[] = {
+/*		cpVect verts[] = {
 			cpv(-34.5f, -9.5f),
 			cpv(-34.5f, 9.5f),
 			cpv( 34.5f, 9.5f),
 			cpv( 34.5f, -9.5f),
+		};*/
+		cpVect verts[] = {
+			cpv(-42.0f, -7.5f),
+			cpv(-42.0f, 7.5f),
+			cpv( 42.0f, 7.5f),
+			cpv( 42.0f, -7.5f),
 		};
 		
 		body = cpBodyNew(1e10/*INFINITY*/, INFINITY);
