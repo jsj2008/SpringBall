@@ -8,6 +8,7 @@
 
 #import "MenuLayer.h"
 #import "LevelScene1.h"
+#import "HelpScene1.h"
 
 @implementation MenuLayer
 
@@ -76,7 +77,8 @@
 }
 
 - (void) helpBt {
-    
+  
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFlipX transitionWithDuration:1.0f scene:[HelpScene1 scene]]];
 }
 
 - (void) scoreBt {

@@ -6,11 +6,17 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "cocos2d.h"
 
 
-@interface HelpScene1 : HelpScene1 {
+@interface HelpScene1 : CCLayer {
     
+	//CCMenu* menu;
+	
 }
+
++ (id) scene;
+
+- (void) pCallback1:(id) sender;
 
 @end
