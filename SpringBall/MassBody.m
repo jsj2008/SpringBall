@@ -23,10 +23,16 @@
 		lay = lr;
 		type = typ;
 		
-		sprite = [CCSprite spriteWithFile:(typ==MS_START)?@"start.png":((typ==MS_FINISH)?@"finish.png":@"pitstop.png")];
+		sprite = [CCSprite spriteWithFile:(typ==MS_START)?@"start1.png":((typ==MS_FINISH)?@"home1.png":@"pitstop1.png")];
 		sprite.position = ccp(-500, -500);
 		[lr addChild:sprite];	
 
+        id anim1 = [CCAnimation animationWithName:@"massbody" delay:0.08f];
+		for( int j = 1; j <= 15; j++)
+			[anim1 addFrameWithFilename:[NSString stringWithFormat:(typ==MS_START)?@"start%d.png":((typ==MS_FINISH)?@"home%d.png":@"pitstop%d.png"), j]];
+        id aaa = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation: anim1]];
+        [sprite runAction:aaa];
+        
 		body = cpBodyNew(1e10/*INFINITY*/, /*INFINITY*/cpMomentForCircle(1.0, 1, 1, cpvzero));
 		cpSpaceAddBody(sp, body);
 

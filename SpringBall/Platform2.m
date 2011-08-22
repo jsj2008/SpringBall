@@ -22,7 +22,7 @@
 		
 		sprite = [CCSprite spriteWithFile:@"platform_grass.png"];
 		sprite.position = ccp(-500, -500);
-		[lr addChild:sprite];	
+		[lr addChild:sprite z:5];	
 		
 		cpVect verts[] = {
 			cpv(-58, -21),
