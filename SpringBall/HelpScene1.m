@@ -33,7 +33,7 @@
 
 		CCMenu* menu = [CCMenu menuWithItems:item1, nil];
 		menu.position = ccp(0,0);
-		item1.position = ccp(size.width - 65, 29);	
+		item1.position = ccp(size.width - 65, 59);	
 		
 		[self addChild: menu z:500];
 		
@@ -44,7 +44,8 @@
 
 - (void) pCallback1:(id) sender {
 
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFlipX transitionWithDuration:1.0f scene:[HelpScene2 scene]]];
+//    [[CCDirector sharedDirector] replaceScene:[CCTransitionFlipX transitionWithDuration:1.0f scene:[HelpScene2 scene]]];
+    [[CCDirector sharedDirector] replaceScene:[HelpScene2 scene]];
 }
 
 @end

@@ -873,6 +873,32 @@ static void eachShape(void* ptr, void* unused) {
 				decrement_counter = &ls->repel_count;
 				break;
 			}
+			case EO_REPEL3: {
+				int i = ls->repel_count + 1;
+				if(i > MAX_REPELCNT)
+					break;
+				ls->repel_count = i;
+				Repel* w = [[Repel alloc]initWithParams:self space:space type:3];
+				[w setPosition:ccp(240,160)];
+				[[Common instance] setRepel:w at:i-1];
+				ls->irepel[i-1].pos = ccp(240,160);
+				obj_hanged = w;
+				decrement_counter = &ls->repel_count;
+				break;
+			}
+			case EO_REPEL4: {
+				int i = ls->repel_count + 1;
+				if(i > MAX_REPELCNT)
+					break;
+				ls->repel_count = i;
+				Repel* w = [[Repel alloc]initWithParams:self space:space type:4];
+				[w setPosition:ccp(240,160)];
+				[[Common instance] setRepel:w at:i-1];
+				ls->irepel[i-1].pos = ccp(240,160);
+				obj_hanged = w;
+				decrement_counter = &ls->repel_count;
+				break;
+			}
 			case EO_NOGRAV: {
 				int i = ls->nograv_count + 1;
 				if(i > MAX_NOGRAVCNT)

@@ -341,7 +341,7 @@
 }
 
 - (CGRect) getRect {
-	return CGRectMake( sprite.position.x - BALL_RADIUS, sprite.position.y - BALL_RADIUS, BALL_RADIUS * 2, BALL_RADIUS * 2);
+	return CGRectMake( sprite.position.x - BALL_RADIUS - 8, sprite.position.y - BALL_RADIUS - 8, BALL_RADIUS * 2 + 16, BALL_RADIUS * 2 + 16);
 }
 
 @end

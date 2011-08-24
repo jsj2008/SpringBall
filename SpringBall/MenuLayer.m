@@ -78,7 +78,8 @@
 
 - (void) helpBt {
   
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFlipX transitionWithDuration:1.0f scene:[HelpScene1 scene]]];
+//    [[CCDirector sharedDirector] replaceScene:[CCTransitionFlipX transitionWithDuration:1.0f scene:[HelpScene1 scene]]];
+    [[CCDirector sharedDirector] replaceScene:[HelpScene1 scene]];
 }
 
 - (void) scoreBt {
