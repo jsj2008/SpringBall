@@ -1235,7 +1235,9 @@ static void eachShape(void* ptr, void* unused) {
 	
 		if(obj_selected) {
 			
-			if((convLocation.x == pt.x) && (convLocation.y == pt.y)) {
+           // NSLog(@"x, pt.x, y, pt.y: %f, %f, %f, %f", convLocation.x, pt.x, convLocation.y, pt.y);
+			if((fabs(convLocation.x - pt.x)<=1) && (fabs(convLocation.y == pt.y)<=1)) {
+                //NSLog(@"rotate");
 				[obj_selected rotate90];
 			}
 			
