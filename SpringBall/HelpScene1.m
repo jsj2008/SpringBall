@@ -33,7 +33,7 @@
 
 		CCMenu* menu = [CCMenu menuWithItems:item1, nil];
 		menu.position = ccp(0,0);
-		item1.position = ccp(size.width - 65, 59);	
+		item1.position = ccp(size.width - 82, 59);	
 		
 		[self addChild: menu z:500];
 		

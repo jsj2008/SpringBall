@@ -25,10 +25,10 @@
 		[lr addChild:sprite z:6];	
 		
 		cpVect verts[] = {
-			cpv(-58, -15),
-			cpv(-58, -7),
-			cpv( 58, -7),
-			cpv( 58, -15),
+			cpv(-38, -15),
+			cpv(-38, -7),
+			cpv( 50, -7),
+			cpv( 50, -15),
 		};
 		
 		body = cpBodyNew(1e10/*INFINITY*/, INFINITY);

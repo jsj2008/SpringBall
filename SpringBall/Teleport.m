@@ -41,7 +41,7 @@
 		
 		cpSpaceAddShape(space, shape);
 		
-		body->w = -4.0f;
+		body->w = 0;//-4.0f;
 		
 		//		cpBodyApplyImpulse(body, cpvmult(cpvnormalize(cpvrperp(sprite.position)),400), cpv(0,5.0f));
 		
