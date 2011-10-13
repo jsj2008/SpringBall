@@ -7,6 +7,7 @@
 //
 
 #import "SeasonLayer.h"
+#import "SummerLayer.h"
 
 @implementation SeasonLayer
 
@@ -95,6 +96,8 @@
 
 - (void) summerBt {
     
+    [[CCDirector sharedDirector] replaceScene: [SummerLayer scene]];
+
 }
 
 - (void) autumnBt {

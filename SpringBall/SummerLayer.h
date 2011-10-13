@@ -6,11 +6,15 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "cocos2d.h"
 
 
-@interface SummerLayer : NSObject {
+@interface SummerLayer : CCLayer {
     
 }
+
++ (CCScene *) scene;
+
+- (void) pCallback1:(id) sender;
 
 @end
