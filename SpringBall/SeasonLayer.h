@@ -6,8 +6,18 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "cocos2d.h"
 
-@interface SeasonLayer : NSObject
+
+@interface SeasonLayer : CCLayer {
+    
+}
+
++ (CCScene *) scene;
+
+- (void) summerBt;
+- (void) autumnBt;
+- (void) winterBt;
+- (void) springBt;
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import "MenuLayer.h"
-#import "LevelScene1.h"
+//#import "LevelScene1.h"
 #import "HelpScene1.h"
+#import "SeasonLayer.h"
 
 @implementation MenuLayer
 
@@ -73,7 +74,8 @@
 
 - (void) startBt {
     
-    [[CCDirector sharedDirector] replaceScene: [LevelScene1 scene]];
+//    [[CCDirector sharedDirector] replaceScene: [LevelScene1 scene]];
+    [[CCDirector sharedDirector] replaceScene: [SeasonLayer scene]];
 }
 
 - (void) helpBt {
