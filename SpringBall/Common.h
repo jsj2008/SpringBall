@@ -39,6 +39,8 @@
 #define MAX_TELEPORTCNT 8
 #define MAX_SCREWCNT 2
 
+#define SEASON_LEVELS_CNT 15
+
 enum BallColors { BC_BLUE, BC_GREEN, BC_RED, BC_VIOLET, BC_YELLOW, BC_MAX /* vsegda v konce */};
 
 /*@interface ATPStruct : NSObject {

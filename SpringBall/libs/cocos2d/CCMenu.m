@@ -176,8 +176,14 @@ enum {
 	
 	selectedItem_ = [self itemForTouch:touch];
 	[selectedItem_ selected];
-//	[selectedItem_ activate];
 	
+    
+    CCMenuItem *currentItem = [self itemForTouch:touch];
+    if (currentItem.tag > 1000) {
+//        NSLog(@"11111111111");
+	[selectedItem_ activate];
+
+    }
 	if( selectedItem_ ) {
 		state_ = kCCMenuStateTrackingTouch;
 		return YES;
