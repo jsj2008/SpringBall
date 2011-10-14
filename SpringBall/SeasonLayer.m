@@ -8,6 +8,7 @@
 
 #import "SeasonLayer.h"
 #import "SummerLayer.h"
+#import "AutumnLayer.h"
 
 @implementation SeasonLayer
 
@@ -71,7 +72,7 @@
         itemSpring.position = ccp(-69, f * 0 + e);
         [itemSpring runAction:[CCMoveTo actionWithDuration:0.3f position:ccp(69, f * 0 + e)]];
 
-        int t = [[NSUserDefaults standardUserDefaults] integerForKey:@"openSeason"];
+        int t = 3;//[[NSUserDefaults standardUserDefaults] integerForKey:@"openSeason"];
         //        [[NSUserDefaults standardUserDefaults] setBool:b forKey:@"onlyWiFi"];
         
         switch (t) {
@@ -101,7 +102,9 @@
 }
 
 - (void) autumnBt {
-    
+
+    [[CCDirector sharedDirector] replaceScene: [AutumnLayer scene]];
+
 }
 
 - (void) winterBt {

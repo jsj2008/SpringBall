@@ -487,6 +487,8 @@ static void eachShape(void* ptr, void* unused) {
 
 -(void) startLevel: (int) l {
 	
+    NSLog(@"Started level %d", l);
+    
 	level = l;
 	selected = -1;	
 	[Common instance].editor = NO;

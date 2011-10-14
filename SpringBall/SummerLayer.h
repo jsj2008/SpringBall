@@ -15,11 +15,31 @@
     
     BOOL click;
     CCSprite* gazons[SEASON_LEVELS_CNT];
+    float ey;
+    float fy;
+    float ex;
+    float fx;
+    CCSprite* ia1;
 }
 
 + (CCScene *) scene;
 
 - (void) pCallback1:(id) sender;
+- (void) pBack:(id) sender;
+//- (void) pCallback2:(id) sender;
+//- (void) pCallback3:(id) sender;
+//- (void) pCallback4:(id) sender;
+//- (void) pCallback5:(id) sender;
+//- (void) pCallback6:(id) sender;
+//- (void) pCallback7:(id) sender;
+//- (void) pCallback8:(id) sender;
+//- (void) pCallback9:(id) sender;
+//- (void) pCallback10:(id) sender;
+//- (void) pCallback11:(id) sender;
+//- (void) pCallback12:(id) sender;
+//- (void) pCallback13:(id) sender;
+//- (void) pCallback14:(id) sender;
+//- (void) pCallback15:(id) sender;
 
 @end
 
