@@ -197,7 +197,7 @@ enum {
 	
 	[selectedItem_ unselected];
 	[selectedItem_ activate];
-	
+	    
 	state_ = kCCMenuStateWaiting;
 }
 
@@ -214,13 +214,13 @@ enum {
 {
 	NSAssert(state_ == kCCMenuStateTrackingTouch, @"[Menu ccTouchMoved] -- invalid state");
 	
-	CCMenuItem *currentItem = [self itemForTouch:touch];
+//	CCMenuItem *currentItem = [self itemForTouch:touch];
 	
-	if (currentItem != selectedItem_) {
-		[selectedItem_ unselected];
-		selectedItem_ = currentItem;
-		[selectedItem_ selected];
-	}
+//	if (currentItem != selectedItem_) {
+//		[selectedItem_ unselected];
+//		selectedItem_ = currentItem;
+//		[selectedItem_ selected];
+//	}
 }
 
 #pragma mark Menu - Mouse

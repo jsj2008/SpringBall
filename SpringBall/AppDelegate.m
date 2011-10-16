@@ -7,14 +7,12 @@
 //
 
 #import "SimpleAudioEngine.h"
-
 #import "cocos2d.h"
-
 #import "AppDelegate.h"
 #import "GameConfig.h"
 #import "RootViewController.h"
-#import "LevelScene1.h"
 #import "MenuLayer.h"
+#import "Common.h"
 
 @implementation AppDelegate
 
@@ -167,7 +165,8 @@
 
 -(void) preloadSounds {
     
-    [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"level_music.mp3"];    
+    [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:LEVEL_MUSIC];    
+    [[SimpleAudioEngine sharedEngine] preloadEffect:BALL_GO_SOUND];
 }
 
 -(void) unloadSounds {

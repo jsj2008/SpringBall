@@ -6,6 +6,7 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import "SimpleAudioEngine.h"
 #import "Ball.h"
 #import "Common.h"
 
@@ -273,6 +274,8 @@
 		shadow[i].position = sprite.position;
 		shadow[i].opacity = 255;
 	}
+    
+    [[SimpleAudioEngine sharedEngine] playEffect:BALL_GO_SOUND];
 }
 
 - (void) stop {

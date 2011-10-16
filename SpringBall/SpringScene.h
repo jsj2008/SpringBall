@@ -51,6 +51,6 @@ enum EditorObjects { EO_EASYWIND/*must be 1st*/, /*EO_STRONGWIND,*/ EO_START, EO
 -(void) step: (ccTime) dt;
 
 - (void) nextlevelCallback:(id) sender;
-
+- (void) pause:(id) sender;
 
 @end

@@ -7,8 +7,7 @@
 //
 
 #import "SeasonLayer.h"
-#import "SummerLayer.h"
-#import "AutumnLayer.h"
+#import "SAWSLayer.h"
 
 @implementation SeasonLayer
 
@@ -97,22 +96,26 @@
 
 - (void) summerBt {
     
-    [[CCDirector sharedDirector] replaceScene: [SummerLayer scene]];
-
+    [Common instance].season = SZ_SUMMER;
+    [[CCDirector sharedDirector] replaceScene: [SAWSLayer scene]];
 }
 
 - (void) autumnBt {
 
-    [[CCDirector sharedDirector] replaceScene: [AutumnLayer scene]];
-
+    [Common instance].season = SZ_AUTUMN;
+    [[CCDirector sharedDirector] replaceScene: [SAWSLayer scene]];
 }
 
 - (void) winterBt {
     
+    [Common instance].season = SZ_WINTER;
+    [[CCDirector sharedDirector] replaceScene: [SAWSLayer scene]];
 }
 
 - (void) springBt {
-    
+
+    [Common instance].season = SZ_SPRING;
+    [[CCDirector sharedDirector] replaceScene: [SAWSLayer scene]];
 }
 
 @end

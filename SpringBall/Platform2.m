@@ -7,7 +7,7 @@
 //
 
 #import "Platform2.h"
-
+#import "Common.h"
 
 @implementation Platform2
 
@@ -20,8 +20,25 @@
 		sp = space;
 		lay = lr;
 		
-		sprite = [CCSprite spriteWithFile:@"platform_grass.png"];
-		sprite.position = ccp(-500, -500);
+//		sprite = [CCSprite spriteWithFile:@"platform_grass.png"];
+
+        switch ([Common instance].season) {
+            case SZ_SUMMER:
+            default:
+                sprite = [CCSprite spriteWithFile:@"platform_summer.png"];
+                break;
+            case SZ_AUTUMN:
+                sprite = [CCSprite spriteWithFile:@"platform_autumn.png"];
+                break;
+            case SZ_WINTER:
+                sprite = [CCSprite spriteWithFile:@"platform_winter.png"];
+                break;
+            case SZ_SPRING:
+                sprite = [CCSprite spriteWithFile:@"platform_spring.png"];
+                break;
+        }
+
+        sprite.position = ccp(-500, -500);
 		[lr addChild:sprite z:6];	
 		
 		cpVect verts[] = {

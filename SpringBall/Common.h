@@ -42,7 +42,11 @@
 #define SEASON_LEVELS_CNT 15
 #define ITEM_TAG 2000
 
+#define LEVEL_MUSIC @"level_music.mp3"
+#define BALL_GO_SOUND @"best_lumps_ball-jump.mp3"
+
 enum BallColors { BC_BLUE, BC_GREEN, BC_RED, BC_VIOLET, BC_YELLOW, BC_MAX /* vsegda v konce */};
+enum Season { SZ_SUMMER, SZ_AUTUMN, SZ_WINTER, SZ_SPRING};
 
 /*@interface ATPStruct : NSObject {
 
@@ -202,6 +206,8 @@ extern LevelStruct* ls;
 @property (readwrite) int ballsonfinish;
 @property (readwrite) bool gravityexists;
 @property (readwrite) int setlevel;
+
+@property (readwrite) int season;
 
 + (Common*) instance;
 

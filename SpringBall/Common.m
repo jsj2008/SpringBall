@@ -44,6 +44,8 @@ LevelStruct* ls = nil;
 @synthesize ballsonfinish;
 //@synthesize gravityAngle;
 
+@synthesize season;
+
 + (Common*) instance  {
 	static Common* instance;
 	@synchronized(self) {

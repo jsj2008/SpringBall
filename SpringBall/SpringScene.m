@@ -8,7 +8,6 @@
 
 #import "SimpleAudioEngine.h"
 #import "SpringScene.h"
-#import "LevelScene1.h"
 
 static 	Ball* ball[MAX_BALLS_NUM];
 
@@ -303,14 +302,36 @@ static void eachShape(void* ptr, void* unused) {
 		
 		[[Common instance] setLayer:self];
         
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"level_music.mp3" loop:YES];
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:LEVEL_MUSIC loop:YES];
         
-		CCSprite* bg = [CCSprite spriteWithFile:@"background1.png"];
+        NSString* fon;
+        NSString* fon1;
+        switch ([Common instance].season) {
+            case SZ_SUMMER:
+            default:
+                fon = @"background_summer.png";
+                fon1 = @"ground_summer.png";
+                break;
+            case SZ_AUTUMN:
+                fon = @"background_autumn.png";
+                fon1 = @"ground_autumn.png";
+                break;
+            case SZ_WINTER:
+                fon = @"background_winter.png";
+                fon1 = @"ground_winter.png";
+                break;
+            case SZ_SPRING:
+                fon = @"background_spring.png";
+                fon1 = @"ground_spring.png";
+                break;
+        }
+
+		CCSprite* bg = [CCSprite spriteWithFile:fon];
 		bg.position = ccp(240, 160);
 		[self addChild:bg z:0];		
 
-		CCSprite* bgg = [CCSprite spriteWithFile:@"ground1.png"];
-		bgg.position = ccp(240, 31);
+		CCSprite* bgg = [CCSprite spriteWithFile:fon1];
+		bgg.position = ccp(240, 18);
 		[self addChild:bgg z:6];		
 
 		direction_sprite = [CCSprite spriteWithFile:@"direction.png"];
@@ -353,7 +374,15 @@ static void eachShape(void* ptr, void* unused) {
 		[item1 setIsEnabled:NO];
  		[self addChild: menu z:3];
 */		
+
 		
+//        CCMenuItemImage* item1 = [CCMenuItemImage itemFromNormalImage:@"icon_pause.png" selectedImage:@"icon_pause.png" target:self selector:@selector(pause:)];
+//        CCMenu* menu = [CCMenu menuWithItems:item1, nil];
+//        menu.visible = NO;
+//        menu.position = ccp(0,0);
+//        item1.position = ccp(100, 100);	
+//        [self addChild: menu z:10];
+
 		// right
 		cpShape *shape1;
 		shape1 = cpSegmentShapeNew(staticBody, ccp(wins.width,0), ccp(wins.width,wins.height), 0.0f);
@@ -479,6 +508,11 @@ static void eachShape(void* ptr, void* unused) {
 	}
 	
 	return self;
+}
+
+- (void) pause:(id) sender {
+    
+    NSLog(@"Pause");
 }
 
 - (void) nextlevelCallback:(id) sender {
