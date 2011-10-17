@@ -41,7 +41,12 @@ enum EditorObjects { EO_EASYWIND/*must be 1st*/, /*EO_STRONGWIND,*/ EO_START, EO
 	int editorobj;
 	int* decrement_counter;
 
-//	CCMenu* menu;
+    CCSprite* bgp;
+    CCMenuItemImage* item2;
+    CCMenuItemImage* item3;
+    CCMenuItemImage* item4;
+    CCMenuItemToggle* item5;
+    //	CCMenu* menu;
 
 }
 
@@ -52,5 +57,10 @@ enum EditorObjects { EO_EASYWIND/*must be 1st*/, /*EO_STRONGWIND,*/ EO_START, EO
 
 - (void) nextlevelCallback:(id) sender;
 - (void) pause:(id) sender;
+- (void) resume:(id) sender;
+- (void) restart:(id) sender;
+- (void) menu:(id) sender;
+- (void) sound:(id) sender;
+-(void) deleteObjects;
 
 @end

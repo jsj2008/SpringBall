@@ -376,13 +376,36 @@ static void eachShape(void* ptr, void* unused) {
 */		
 
 		
-//        CCMenuItemImage* item1 = [CCMenuItemImage itemFromNormalImage:@"icon_pause.png" selectedImage:@"icon_pause.png" target:self selector:@selector(pause:)];
-//        CCMenu* menu = [CCMenu menuWithItems:item1, nil];
-//        menu.visible = NO;
-//        menu.position = ccp(0,0);
-//        item1.position = ccp(100, 100);	
-//        [self addChild: menu z:10];
+        CCMenuItemImage* item1 = [CCMenuItemImage itemFromNormalImage:@"icon_pause.png" selectedImage:@"icon_pause.png" target:self selector:@selector(pause:)];
+        item2 = [CCMenuItemImage itemFromNormalImage:@"button_resume.png" selectedImage:@"button_resume_activ.png" target:self selector:@selector(resume:)];
+        item3 = [CCMenuItemImage itemFromNormalImage:@"button_restart.png" selectedImage:@"button_restart_activ.png" target:self selector:@selector(restart:)];
+        item4 = [CCMenuItemImage itemFromNormalImage:@"menu.png" selectedImage:@"menu_activ.png" target:self selector:@selector(menu:)];
 
+        CCMenuItemImage* itemSoundOn = [CCMenuItemImage itemFromNormalImage:@"s_sound_ON.png" selectedImage:@"s_sound_ON.png" target:nil selector:nil];
+        CCMenuItemImage* itemSoundOff = [CCMenuItemImage itemFromNormalImage:@"s_sound_OFF.png" selectedImage:@"s_sound_OFF.png" target:nil selector:nil];
+
+        item5 =  [CCMenuItemToggle itemWithTarget:self selector:@selector(sound:) items:itemSoundOn , itemSoundOff , nil];
+        
+        CCMenu* menu = [CCMenu menuWithItems:item1, item2, item3, item4, item5, nil];
+//        menu.visible = NO;
+        menu.position = ccp(0,0);
+        item1.position = ccp(445, 305);	
+        item2.position = ccp(85, 200);	
+        item3.position = ccp(84, 150);
+        item4.position = ccp(398, 59);	
+        item5.position = ccp(30, 290);
+
+        [self addChild: menu z:50];
+
+        bgp = [CCSprite spriteWithFile:@"black_fon.png"];
+		bgp.position = ccp(240, 160);
+        bgp.visible = NO;
+        item2.visible = NO;
+        item3.visible = NO;
+        item4.visible = NO;
+        item5.visible = NO;
+        
+		[self addChild:bgp z:48];	
 		// right
 		cpShape *shape1;
 		shape1 = cpSegmentShapeNew(staticBody, ccp(wins.width,0), ccp(wins.width,wins.height), 0.0f);
@@ -513,6 +536,62 @@ static void eachShape(void* ptr, void* unused) {
 - (void) pause:(id) sender {
     
     NSLog(@"Pause");
+    bgp.visible = YES;
+    item2.visible = YES;
+    item3.visible = YES;
+    item4.visible = YES;
+    item5.visible = YES;
+    [[CCDirector sharedDirector] pause];
+    
+}
+
+- (void) resume:(id) sender {
+
+    NSLog(@"Resume");
+    bgp.visible = NO;
+    item2.visible = NO;
+    item3.visible = NO;
+    item4.visible = NO;
+    item5.visible = NO;
+    
+    [[CCDirector sharedDirector] resume];
+ 
+}
+
+- (void) restart:(id) sender {
+    
+    NSLog(@"Restart");
+    bgp.visible = NO;
+    item2.visible = NO;
+    item3.visible = NO;
+    item4.visible = NO;
+    item5.visible = NO;
+
+    [self unschedule: @selector(step:)];
+
+    [[CCDirector sharedDirector] resume];
+    [self startLevel:level];
+    [self schedule: @selector(step:)];// interval:0.5];
+
+}
+
+- (void) menu:(id) sender {
+    
+    bgp.visible = NO;
+    item2.visible = NO;
+    item3.visible = NO;
+    item4.visible = NO;
+    item5.visible = NO;
+    
+    [[CCDirector sharedDirector] resume];
+        NSLog(@"Menu");
+    [[CCDirector sharedDirector] popScene/*replaceScene:[SpringScene scene]*/];
+
+}
+
+- (void) sound:(id) sender {
+ 
+        NSLog(@"sound - %d", [sender selectedIndex]);
 }
 
 - (void) nextlevelCallback:(id) sender {
@@ -522,6 +601,7 @@ static void eachShape(void* ptr, void* unused) {
 -(void) startLevel: (int) l {
 	
     NSLog(@"Started level %d", l);
+
     
 	level = l;
 	selected = -1;	
@@ -563,8 +643,12 @@ static void eachShape(void* ptr, void* unused) {
 		[[[Common instance] getTeleport:i] release];
 	for(int i = 0; i < ls->screw_count; i++)
 		[[[Common instance] getScrew:i] release];
-	for(int i = 0; i < ls->ballsnum; i++)
+	
+    for(int i = 0; i < ls->ballsnum; i++) {
+           
+        NSLog(@"Ball %d releasing", i);
 		[ball[i] release];
+    }
 		
 	[[Common instance] getLevelParams:level params:ls];
 	
@@ -684,6 +768,8 @@ static void eachShape(void* ptr, void* unused) {
 		[w setPosition:ls->iscrew[i]];
 	}
 	
+//    NSLog(@"start_count = %d", ls->istart[0].balls);
+//    NSLog(@"retains0 = %d", [ball[0] retainCount]);
 //	ls->ballsnum = 0;
 	int h = 0;
     int col = BC_BLUE;
@@ -695,13 +781,17 @@ static void eachShape(void* ptr, void* unused) {
             int randx = 25 - CCRANDOM_0_1() * 50;
 			int randy = 0;
 			ball[h++/*i*/] = [[Ball alloc]initWithParams:self space:space pos:ccp(randx + ls->istart[j].pos.x/*ls->start.x*/, randy + ls->istart[j].pos.y/*ls->start.y*/ + 20) color:col];
+            [ball[h-1] release];
             col++;
             if(col >= BC_MAX)
                 col = BC_BLUE;
 		}
 	}
 	ls->ballsnum = h;
-		
+    
+    NSLog(@"retains1 = %d", [ball[0] retainCount]);
+
+	
 }
 
 - (void) ccTouchesMoved:(NSSet* )touches withEvent:(UIEvent* )event {
@@ -1421,7 +1511,26 @@ static void eachShape(void* ptr, void* unused) {
 
 - (void) dealloc {
 	
-	for(int i = 0; i < ls->wind_count; i++)
+    [self deleteObjects];
+
+	[super dealloc];
+	
+//	[startmassbody release];
+//	[finishmassbody release];
+
+	[ls release];
+
+//	[obj_hanged release];
+//	[obj_selected release];
+	
+	cpSpaceFreeChildren(space);
+	cpSpaceFree(space);
+
+}
+
+-(void) deleteObjects {
+    
+    for(int i = 0; i < ls->wind_count; i++)
 		[[[Common instance] getWind:i] release];
 	for(int i = 0; i < ls->transit_count; i++)
 		[[[Common instance] getTransit:i] release];
@@ -1455,20 +1564,6 @@ static void eachShape(void* ptr, void* unused) {
 		[[[Common instance] getScrew:i] release];
 	for(int i = 0; i < ls->ballsnum; i++)
 		[ball[i] release];
-
-	[super dealloc];
-	
-//	[startmassbody release];
-//	[finishmassbody release];
-
-	[ls release];
-
-//	[obj_hanged release];
-//	[obj_selected release];
-	
-	cpSpaceFreeChildren(space);
-	cpSpaceFree(space);
-
 }
 
 -(void) step: (ccTime) delta {

@@ -229,8 +229,11 @@
 
 - (void) dealloc {
 		
-	//	[super dealloc];
+//		[super dealloc];
 
+    NSLog(@"Ball dealloc");
+    
+    
 	if((status == BS_ONSTART) || (status == BS_ONFINISH)) {
 		cpConstraintDestroy(cons);
 		cpConstraintFree(cons);
@@ -245,8 +248,9 @@
 //	cpSpaceRemoveBody(sp, body);
 //	cpBodyFree(body);
 	
+    NSLog(@"anm_vzr retains = %d", [anm_vzr retainCount]);
 	[anm_move release];
-	[anm_vzr release];
+//	[anm_vzr release];
 	
 	for(int i = 0; i <  [Common instance].tailcount; i++)
 		[lay removeChild:shadow[i] cleanup:NO];
