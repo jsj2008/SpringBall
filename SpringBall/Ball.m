@@ -235,9 +235,11 @@
     
     
 	if((status == BS_ONSTART) || (status == BS_ONFINISH)) {
+        
 		cpConstraintDestroy(cons);
 		cpConstraintFree(cons);
 		cpSpaceRemoveConstraint(sp, cons);
+//        cpSpaceAddPostStepCallback(sp, (cpPostStepFunc)postStepConsRemove, monster.shape, monster);
 	}
 	
 //	[sprite stopAllActions];
