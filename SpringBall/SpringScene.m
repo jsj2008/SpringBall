@@ -306,26 +306,33 @@ static void eachShape(void* ptr, void* unused) {
         
         NSString* fon;
         NSString* fon1;
+        NSString* szname;
         switch ([Common instance].season) {
             case SZ_SUMMER:
             default:
                 fon = @"background_summer.png";
                 fon1 = @"ground_summer.png";
+                szname = @"summer.png";
                 break;
             case SZ_AUTUMN:
                 fon = @"background_autumn.png";
                 fon1 = @"ground_autumn.png";
+                szname = @"autumn.png";
                 break;
             case SZ_WINTER:
                 fon = @"background_winter.png";
                 fon1 = @"ground_winter.png";
+                szname = @"winter.png";
                 break;
             case SZ_SPRING:
                 fon = @"background_spring.png";
                 fon1 = @"ground_spring.png";
+                szname = @"spring.png";
                 break;
         }
 
+        NSString* lvname = [NSString stringWithFormat:@"level_%i.png", ([Common instance].setlevel % SEASON_LEVELS_CNT)];
+        
 		CCSprite* bg = [CCSprite spriteWithFile:fon];
 		bg.position = ccp(240, 160);
 		[self addChild:bg z:0];		
@@ -333,6 +340,16 @@ static void eachShape(void* ptr, void* unused) {
 		CCSprite* bgg = [CCSprite spriteWithFile:fon1];
 		bgg.position = ccp(240, 18);
 		[self addChild:bgg z:6];		
+
+        levelname = [CCSprite spriteWithFile:lvname];
+		levelname.position = ccp(420, 280);
+        levelname.visible = NO;
+		[self addChild:levelname z:50];
+
+        seasonname = [CCSprite spriteWithFile:szname];
+		seasonname.position = ccp(420, 285);
+        seasonname.visible = NO;
+		[self addChild:seasonname z:50];
 
 		direction_sprite = [CCSprite spriteWithFile:@"direction.png"];
 		[self addChild:direction_sprite z:5];
@@ -376,7 +393,7 @@ static void eachShape(void* ptr, void* unused) {
 */		
 
 		
-        CCMenuItemImage* item1 = [CCMenuItemImage itemFromNormalImage:@"icon_pause.png" selectedImage:@"icon_pause.png" target:self selector:@selector(pause:)];
+        item1 = [CCMenuItemImage itemFromNormalImage:@"icon_pause.png" selectedImage:@"icon_pause.png" target:self selector:@selector(pause:)];
         item2 = [CCMenuItemImage itemFromNormalImage:@"button_resume.png" selectedImage:@"button_resume_activ.png" target:self selector:@selector(resume:)];
         item3 = [CCMenuItemImage itemFromNormalImage:@"button_restart.png" selectedImage:@"button_restart_activ.png" target:self selector:@selector(restart:)];
         item4 = [CCMenuItemImage itemFromNormalImage:@"menu.png" selectedImage:@"menu_activ.png" target:self selector:@selector(menu:)];
@@ -385,13 +402,13 @@ static void eachShape(void* ptr, void* unused) {
         CCMenuItemImage* itemSoundOff = [CCMenuItemImage itemFromNormalImage:@"s_sound_OFF.png" selectedImage:@"s_sound_OFF.png" target:nil selector:nil];
 
         item5 =  [CCMenuItemToggle itemWithTarget:self selector:@selector(sound:) items:itemSoundOn , itemSoundOff , nil];
-        
+                
         CCMenu* menu = [CCMenu menuWithItems:item1, item2, item3, item4, item5, nil];
 //        menu.visible = NO;
         menu.position = ccp(0,0);
         item1.position = ccp(445, 305);	
         item2.position = ccp(85, 200);	
-        item3.position = ccp(84, 150);
+        item3.position = ccp(84, 125);
         item4.position = ccp(398, 59);	
         item5.position = ccp(30, 290);
 
@@ -537,10 +554,14 @@ static void eachShape(void* ptr, void* unused) {
     
     NSLog(@"Pause");
     bgp.visible = YES;
+    item1.visible = NO;
     item2.visible = YES;
     item3.visible = YES;
     item4.visible = YES;
     item5.visible = YES;
+    levelname.visible = YES;
+    seasonname.visible = YES;
+    
     [[CCDirector sharedDirector] pause];
     
 }
@@ -549,10 +570,13 @@ static void eachShape(void* ptr, void* unused) {
 
     NSLog(@"Resume");
     bgp.visible = NO;
+    item1.visible = YES;
     item2.visible = NO;
     item3.visible = NO;
     item4.visible = NO;
     item5.visible = NO;
+    levelname.visible = NO;
+    seasonname.visible = NO;
     
     [[CCDirector sharedDirector] resume];
  

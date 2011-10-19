@@ -144,11 +144,11 @@
         
         [self addChild:menu];
         
-        [item11 setIsEnabled:NO];
-        [item12 setIsEnabled:NO];
-        [item13 setIsEnabled:NO];
-        [item14 setIsEnabled:NO];
-        [item15 setIsEnabled:NO];
+//        [item11 setIsEnabled:NO];
+//        [item12 setIsEnabled:NO];
+//        [item13 setIsEnabled:NO];
+//        [item14 setIsEnabled:NO];
+//        [item15 setIsEnabled:NO];
         
         //        NSLog(@"--- %f, %f, %f", (double)(0%5), (double)(1%5), (double)(7%5));
         

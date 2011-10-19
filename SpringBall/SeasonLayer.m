@@ -8,6 +8,7 @@
 
 #import "SeasonLayer.h"
 #import "SAWSLayer.h"
+#import "MenuLayer.h"
 
 @implementation SeasonLayer
 
@@ -57,19 +58,22 @@
                 
         CCMenuItemImage* itemSummer = [CCMenuItemImage itemFromNormalImage:@"button_summer.png" selectedImage:@"button_summer_activ.png" target:self selector:@selector(summerBt)];
         itemSummer.position = ccp(-77, f * 3 + e);
-        [itemSummer runAction:[CCMoveTo actionWithDuration:0.4f position:ccp(77, f * 3 + e)]];
+        [itemSummer runAction:[CCMoveTo actionWithDuration:0.2f position:ccp(77, f * 3 + e)]];
 
         CCMenuItemImage* itemAutumn = [CCMenuItemImage itemFromNormalImage:@"button_autumn.png" selectedImage:@"button_autumn_activ.png" target:self selector:@selector(autumnBt)];
         itemAutumn.position = ccp(-74, f * 2 + e);
-        [itemAutumn runAction:[CCMoveTo actionWithDuration:0.2f position:ccp(74, f * 2 + e)]];
+        [itemAutumn runAction:[CCMoveTo actionWithDuration:0.3f position:ccp(74, f * 2 + e)]];
         
         CCMenuItemImage* itemWinter = [CCMenuItemImage itemFromNormalImage:@"button_winter.png" selectedImage:@"button_winter_activ.png" target:self selector:@selector(winterBt)];
         itemWinter.position = ccp(-68, f * 1 + e);
-        [itemWinter runAction:[CCMoveTo actionWithDuration:0.5f position:ccp(68, f * 1 + e)]];
+        [itemWinter runAction:[CCMoveTo actionWithDuration:0.4f position:ccp(68, f * 1 + e)]];
 
         CCMenuItemImage* itemSpring = [CCMenuItemImage itemFromNormalImage:@"button_spring.png" selectedImage:@"button_spring_activ.png" target:self selector:@selector(springBt)];
         itemSpring.position = ccp(-69, f * 0 + e);
-        [itemSpring runAction:[CCMoveTo actionWithDuration:0.3f position:ccp(69, f * 0 + e)]];
+        [itemSpring runAction:[CCMoveTo actionWithDuration:0.5f position:ccp(69, f * 0 + e)]];
+
+        CCMenuItemImage* itemb = [CCMenuItemImage itemFromNormalImage:@"back.png" selectedImage:@"back_activ.png" target:self selector:@selector(backBt)];
+        itemb.position = ccp(398, 45);	
 
         int t = 3;//[[NSUserDefaults standardUserDefaults] integerForKey:@"openSeason"];
         //        [[NSUserDefaults standardUserDefaults] setBool:b forKey:@"onlyWiFi"];
@@ -86,12 +90,17 @@
                 lck1.visible = YES;
         }
         
-        CCMenu* menu = [CCMenu menuWithItems:itemSummer, itemAutumn, itemWinter, itemSpring, nil];
+        CCMenu* menu = [CCMenu menuWithItems:itemSummer, itemAutumn, itemWinter, itemSpring, itemb, nil];
         menu.position = ccp(0,0);
-        [self addChild: menu];
+        [self addChild: menu z:6];
     }
     
     return self;
+}
+
+- (void) backBt {
+    
+    [[CCDirector sharedDirector] replaceScene: [MenuLayer scene]];
 }
 
 - (void) summerBt {

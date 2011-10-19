@@ -42,11 +42,15 @@ enum EditorObjects { EO_EASYWIND/*must be 1st*/, /*EO_STRONGWIND,*/ EO_START, EO
 	int* decrement_counter;
 
     CCSprite* bgp;
+    CCMenuItemImage* item1;
     CCMenuItemImage* item2;
     CCMenuItemImage* item3;
     CCMenuItemImage* item4;
     CCMenuItemToggle* item5;
     //	CCMenu* menu;
+
+    CCSprite* levelname;
+    CCSprite* seasonname;
 
 }
 
