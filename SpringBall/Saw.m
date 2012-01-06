@@ -11,12 +11,15 @@
 
 @implementation Saw
 
-- (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space {
+//- (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space {
+- (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space type:(int)type {
 	
 	self = [super init];
 	
 	if(self !=nil) {
 		
+        typ = type;
+        
 		sp = space;
 		lay = lr;
 		
@@ -26,7 +29,9 @@
 		
 		body = cpBodyNew(1e10/*INFINITY*/, /*INFINITY*/cpMomentForCircle(1.0, 1, 1, cpvzero));
 		cpSpaceAddBody(sp, body);
-		
+	
+//        [bg runAction:[CCSequence actions:[CCMoveTo actionWithDuration:0.7f position:ccp(size.width/2 + 10, size.height/2)], [CCCallFuncN actionWithTarget:self selector:@selector(init1)], nil]];
+        
 		shape = cpCircleShapeNew(body, SAW_RADIUS, cpvzero);
 		shape->e = 0.5f;
 		shape->u = 0.5f;
@@ -38,6 +43,7 @@
 //		body->w = 1.5f;
 
 //		cpBodyApplyImpulse(body, cpvmult(cpvnormalize(cpvrperp(sprite.position)),400), cpv(0,5.0f));
+		cpBodyApplyImpulse(body, cpv(400,400), cpvzero);
 	
 	}
 	

@@ -331,7 +331,10 @@ static void eachShape(void* ptr, void* unused) {
                 break;
         }
 
-        NSString* lvname = [NSString stringWithFormat:@"level_%i.png", ([Common instance].setlevel % SEASON_LEVELS_CNT)];
+        
+        int cc = (([Common instance].setlevel - 1) % SEASON_LEVELS_CNT) + 1;
+        NSLog(@"level_i = %i", cc);
+        NSString* lvname = [NSString stringWithFormat:@"level_%i.png", cc];
         
 		CCSprite* bg = [CCSprite spriteWithFile:fon];
 		bg.position = ccp(240, 160);
@@ -586,10 +589,13 @@ static void eachShape(void* ptr, void* unused) {
     
     NSLog(@"Restart");
     bgp.visible = NO;
+    item1.visible = YES;
     item2.visible = NO;
     item3.visible = NO;
     item4.visible = NO;
     item5.visible = NO;
+    levelname.visible = NO;
+    seasonname.visible = NO;
 
     [self unschedule: @selector(step:)];
 
@@ -701,7 +707,7 @@ static void eachShape(void* ptr, void* unused) {
 	for(int i = 0; i < ls->platform_count2; i++)
 		[[Common instance] setPlatform2:[[Platform2 alloc]initWithParams:self space:space] at:i];
 	for(int i = 0; i < ls->saw_count; i++)
-		[[Common instance] setSaw:[[Saw alloc]initWithParams:self space:space] at:i];
+		[[Common instance] setSaw:[[Saw alloc]initWithParams:self space:space type:ST_VERTICAL] at:i];
 	for(int i = 0; i < ls->star_count; i++)
 		[[Common instance] setStar:[[Star alloc]initWithParams:self space:space] at:i];
 	for(int i = 0; i < ls->teleport_count; i++)
@@ -1106,7 +1112,7 @@ static void eachShape(void* ptr, void* unused) {
 				if(i > MAX_SAWCNT)
 					break;
 				ls->saw_count = i;
-				Saw* w = [[Saw alloc]initWithParams:self space:space];
+				Saw* w = [[Saw alloc]initWithParams:self space:space type:ST_VERTICAL];
 				[w setPosition:ccp(240,160)];
 				[[Common instance] setSaw:w at:i-1];
 				ls->isaw[i-1] = ccp(240,160);

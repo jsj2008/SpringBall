@@ -11,9 +11,11 @@
 #define SAW_RADIUS 25
 
 @interface Saw : CommonObj {
-	
+
+		int typ;
 }
 
-- (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space;
+//- (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space;
+- (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space type:(int)type;
 
 @end

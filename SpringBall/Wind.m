@@ -25,7 +25,7 @@
 		typ = type;
 		angle = 0;
 		
-		sprite = [CCSprite spriteWithFile:@"weakwind1.png"];
+		sprite = [CCSprite spriteWithFile:@"wing_weak_1.png"];
 		sprite.position = ccp(-500, -500);
 		[lr addChild:sprite];	
 

@@ -48,6 +48,8 @@
 enum BallColors { BC_BLUE, BC_GREEN, BC_RED, BC_VIOLET, BC_YELLOW, BC_MAX /* vsegda v konce */};
 enum Season { SZ_SUMMER, SZ_AUTUMN, SZ_WINTER, SZ_SPRING};
 
+enum Saw_types { ST_VERTICAL, ST_HORIZONTAL };
+
 /*@interface ATPStruct : NSObject {
 
 @public
