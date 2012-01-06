@@ -284,6 +284,51 @@ static int presolveSpikeTeleport(cpArbiter* arb, cpSpace* space, void* ignore) {
 static int presolveSpikeScrew(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
 static int presolveSpikeStar(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
 
+static int presolvePlatformSaw(cpArbiter* arb, cpSpace* space, void* ignore) {	return 0; }
+static int presolvePlatformPitstop(cpArbiter* arb, cpSpace* space, void* ignore) {	return 0; }
+static int presolvePlatformWind(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformRepel(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformWall(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformSpike(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformNograv(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformArrow(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformHyper(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformPlatform(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformPlatform1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformTeleport(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformScrew(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformStar(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+
+static int presolvePlatformSaw1(cpArbiter* arb, cpSpace* space, void* ignore) {	return 0; }
+static int presolvePlatformPitstop1(cpArbiter* arb, cpSpace* space, void* ignore) {	return 0; }
+static int presolvePlatformWind1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformRepel1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformWall1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformSpike1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformNograv1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformArrow1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformHyper1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+//static int presolvePlatformPlatform1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformPlatform11(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformTeleport1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformScrew1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformStar1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+
+static int presolvePlatformSaw2(cpArbiter* arb, cpSpace* space, void* ignore) {	return 0; }
+static int presolvePlatformPitstop2(cpArbiter* arb, cpSpace* space, void* ignore) {	return 0; }
+static int presolvePlatformWind2(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformRepel2(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformWall2(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformSpike2(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformNograv2(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformArrow2(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformHyper2(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformPlatform2(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformPlatform12(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformTeleport2(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformScrew2(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolvePlatformStar2(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+
 
 static void eachShape(void* ptr, void* unused) {
 	
@@ -585,6 +630,54 @@ static void eachShape(void* ptr, void* unused) {
 		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_SCREW, NULL, presolveSpikeScrew, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_STAR, NULL, presolveSpikeStar, NULL, NULL, NULL);
 
+        cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_SAW, NULL, presolvePlatformSaw, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_PITSTOP, NULL, presolvePlatformPitstop, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_WIND, NULL, presolvePlatformWind, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_REPEL, NULL, presolvePlatformRepel, NULL, NULL, NULL);
+        cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_WALL, NULL, presolvePlatformWall, NULL, NULL, NULL);
+        cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_SPIKE, NULL, presolvePlatformSpike, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_NOGRAV, NULL, presolvePlatformNograv, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_ARROW, NULL, presolvePlatformArrow, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_HYPER, NULL, presolvePlatformHyper, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_PLATFORM, NULL, presolvePlatformPlatform, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_PLATFORM1, NULL, presolvePlatformPlatform1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_PLATFORM2, NULL, presolvePlatformPlatform1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_TELEPORT, NULL, presolvePlatformTeleport, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_SCREW, NULL, presolvePlatformScrew, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM, CT_STAR, NULL, presolvePlatformStar, NULL, NULL, NULL);
+
+        cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_SAW, NULL, presolvePlatformSaw1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_PITSTOP, NULL, presolvePlatformPitstop1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_WIND, NULL, presolvePlatformWind1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_REPEL, NULL, presolvePlatformRepel1, NULL, NULL, NULL);
+        cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_WALL, NULL, presolvePlatformWall1, NULL, NULL, NULL);
+        cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_SPIKE, NULL, presolvePlatformSpike1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_NOGRAV, NULL, presolvePlatformNograv1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_ARROW, NULL, presolvePlatformArrow1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_HYPER, NULL, presolvePlatformHyper1, NULL, NULL, NULL);
+//		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_PLATFORM, NULL, presolvePlatformPlatform1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_PLATFORM1, NULL, presolvePlatformPlatform11, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_PLATFORM2, NULL, presolvePlatformPlatform11, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_TELEPORT, NULL, presolvePlatformTeleport1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_SCREW, NULL, presolvePlatformScrew1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM1, CT_STAR, NULL, presolvePlatformStar1, NULL, NULL, NULL);
+
+        cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_SAW, NULL, presolvePlatformSaw2, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_PITSTOP, NULL, presolvePlatformPitstop2, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_WIND, NULL, presolvePlatformWind2, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_REPEL, NULL, presolvePlatformRepel2, NULL, NULL, NULL);
+        cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_WALL, NULL, presolvePlatformWall2, NULL, NULL, NULL);
+        cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_SPIKE, NULL, presolvePlatformSpike2, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_NOGRAV, NULL, presolvePlatformNograv2, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_ARROW, NULL, presolvePlatformArrow2, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_HYPER, NULL, presolvePlatformHyper2, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_PLATFORM, NULL, presolvePlatformPlatform2, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_PLATFORM1, NULL, presolvePlatformPlatform12, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_PLATFORM2, NULL, presolvePlatformPlatform12, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_TELEPORT, NULL, presolvePlatformTeleport2, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_SCREW, NULL, presolvePlatformScrew2, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_PLATFORM2, CT_STAR, NULL, presolvePlatformStar2, NULL, NULL, NULL);
+        
 		cpSpaceResizeStaticHash(space, 400.0f, 40);
 		cpSpaceResizeActiveHash(space, 100, 600);
 		
