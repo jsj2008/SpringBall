@@ -254,6 +254,36 @@ static int presolveStarTeleport(cpArbiter* arb, cpSpace* space, void* ignore) { 
 static int presolveStarScrew(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
 static int presolveStarStar(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
 
+static int presolveSawSaw(cpArbiter* arb, cpSpace* space, void* ignore) {	return 0; }
+static int presolveSawPitstop(cpArbiter* arb, cpSpace* space, void* ignore) {	return 0; }
+static int presolveSawWind(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSawRepel(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSawWall(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSawSpike(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSawNograv(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSawArrow(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSawHyper(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSawPlatform(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSawPlatform1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSawTeleport(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSawScrew(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSawStar(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+
+static int presolveSpikeSaw(cpArbiter* arb, cpSpace* space, void* ignore) {	return 0; }
+static int presolveSpikePitstop(cpArbiter* arb, cpSpace* space, void* ignore) {	return 0; }
+static int presolveSpikeWind(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSpikeRepel(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+//static int presolveSpikeWall(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+//static int presolveSpikeSpike(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSpikeNograv(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSpikeArrow(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSpikeHyper(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSpikePlatform(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSpikePlatform1(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSpikeTeleport(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSpikeScrew(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+static int presolveSpikeStar(cpArbiter* arb, cpSpace* space, void* ignore) { return 0; }
+
 
 static void eachShape(void* ptr, void* unused) {
 	
@@ -522,7 +552,39 @@ static void eachShape(void* ptr, void* unused) {
 		cpSpaceAddCollisionHandler(space, CT_STAR, CT_TELEPORT, NULL, presolveStarTeleport, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_STAR, CT_SCREW, NULL, presolveStarScrew, NULL, NULL, NULL);
 		cpSpaceAddCollisionHandler(space, CT_STAR, CT_STAR, NULL, presolveStarStar, NULL, NULL, NULL);
-		
+
+        cpSpaceAddCollisionHandler(space, CT_SAW, CT_SAW, NULL, presolveSawSaw, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_PITSTOP, NULL, presolveSawPitstop, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_WIND, NULL, presolveSawWind, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_REPEL, NULL, presolveSawRepel, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_WALL, NULL, presolveSawWall, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_SPIKE, NULL, presolveSawSpike, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_NOGRAV, NULL, presolveSawNograv, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_ARROW, NULL, presolveSawArrow, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_HYPER, NULL, presolveSawHyper, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_PLATFORM, NULL, presolveSawPlatform, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_PLATFORM1, NULL, presolveSawPlatform1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_PLATFORM2, NULL, presolveSawPlatform1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_TELEPORT, NULL, presolveSawTeleport, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_SCREW, NULL, presolveSawScrew, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SAW, CT_STAR, NULL, presolveSawStar, NULL, NULL, NULL);
+
+        cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_SAW, NULL, presolveSpikeSaw, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_PITSTOP, NULL, presolveSpikePitstop, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_WIND, NULL, presolveSpikeWind, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_REPEL, NULL, presolveSpikeRepel, NULL, NULL, NULL);
+//		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_WALL, NULL, presolveSpikeWall, NULL, NULL, NULL);
+//		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_SPIKE, NULL, presolveSpikeSpike, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_NOGRAV, NULL, presolveSpikeNograv, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_ARROW, NULL, presolveSpikeArrow, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_HYPER, NULL, presolveSpikeHyper, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_PLATFORM, NULL, presolveSpikePlatform, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_PLATFORM1, NULL, presolveSpikePlatform1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_PLATFORM2, NULL, presolveSpikePlatform1, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_TELEPORT, NULL, presolveSpikeTeleport, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_SCREW, NULL, presolveSpikeScrew, NULL, NULL, NULL);
+		cpSpaceAddCollisionHandler(space, CT_SPIKE, CT_STAR, NULL, presolveSpikeStar, NULL, NULL, NULL);
+
 		cpSpaceResizeStaticHash(space, 400.0f, 40);
 		cpSpaceResizeActiveHash(space, 100, 600);
 		

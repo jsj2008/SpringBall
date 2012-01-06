@@ -209,7 +209,7 @@
 	status = BS_DIED;
 	//[sprite initWithFile:@"2.png"];
 	[sprite runAction:anm_vzr];
-	cpBodyResetForces(body);
+//	cpBodyResetForces(body);
 	body->w = 0;
 	body->i = 0;
 	body->v = cpvzero;
