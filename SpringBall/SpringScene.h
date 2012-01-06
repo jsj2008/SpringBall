@@ -12,7 +12,7 @@
 
 //extern LevelStruct* ls;
 
-enum EditorObjects { EO_EASYWIND/*must be 1st*/, /*EO_STRONGWIND,*/ EO_START, EO_FINISH, EO_TRANSIT, EO_ARROW, EO_HYPER, EO_SPIKE, EO_REPEL0, EO_REPEL1, EO_REPEL2, EO_REPEL3, EO_REPEL4, EO_NOGRAV, EO_PLATFORM, EO_PLATFORM1, EO_PLATFORM2, EO_SAW, EO_TELEPORT, EO_SCREW, EO_STAR, EO_MAX/*must be always at the end*/ };
+enum EditorObjects { EO_EASYWIND/*must be 1st*/, EO_STRONGWIND, EO_START, EO_FINISH, EO_TRANSIT, EO_ARROW, EO_HYPER, EO_SPIKE, EO_REPEL0, EO_REPEL1, EO_REPEL2, EO_REPEL3, EO_REPEL4, EO_NOGRAV, EO_PLATFORM, EO_PLATFORM1, EO_PLATFORM2, EO_SAW, EO_TELEPORT, EO_SCREW, EO_STAR, EO_MAX/*must be always at the end*/ };
 
 //extern int balls_num[MAX_LEVEL];
 //extern int start_pos[MAX_LEVEL][2];
@@ -52,6 +52,7 @@ enum EditorObjects { EO_EASYWIND/*must be 1st*/, /*EO_STRONGWIND,*/ EO_START, EO
     CCSprite* levelname;
     CCSprite* seasonname;
 
+    int sawcnt;
 }
 
 +(id) scene;

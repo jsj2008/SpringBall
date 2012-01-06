@@ -8,6 +8,7 @@
 
 #import "SimpleAudioEngine.h"
 #import "SpringScene.h"
+#import "Saw.h"
 
 static 	Ball* ball[MAX_BALLS_NUM];
 
@@ -296,6 +297,8 @@ static void eachShape(void* ptr, void* unused) {
 		self.isTouchEnabled = YES;
 		self.isAccelerometerEnabled = NO;
 		
+        sawcnt = 0;
+        
 		editorobj = EO_EASYWIND;
 		
 		ls = [LevelStruct alloc];
@@ -707,7 +710,7 @@ static void eachShape(void* ptr, void* unused) {
 	for(int i = 0; i < ls->platform_count2; i++)
 		[[Common instance] setPlatform2:[[Platform2 alloc]initWithParams:self space:space] at:i];
 	for(int i = 0; i < ls->saw_count; i++)
-		[[Common instance] setSaw:[[Saw alloc]initWithParams:self space:space type:ST_VERTICAL] at:i];
+		[[Common instance] setSaw:[[Saw alloc]initWithParams:self space:space type:ls->isaw[i].type] at:i];
 	for(int i = 0; i < ls->star_count; i++)
 		[[Common instance] setStar:[[Star alloc]initWithParams:self space:space] at:i];
 	for(int i = 0; i < ls->teleport_count; i++)
@@ -780,7 +783,7 @@ static void eachShape(void* ptr, void* unused) {
 	
 	for(int i = 0; i < ls->saw_count; i++) {
 		Saw* w = [[Common instance] getSaw:i];
-		[w setPosition:ls->isaw[i]];
+		[w setPosition:ls->isaw[i].pos];
 	}
 
 	for(int i = 0; i < ls->star_count; i++) {
@@ -898,7 +901,7 @@ static void eachShape(void* ptr, void* unused) {
 				//NSLog(@"xw = %f, yw = %f", w.sprite.position.x, w.sprite.position.y);
 				break;
 			}
-/*			case EO_STRONGWIND: {
+			case EO_STRONGWIND: {
 				int i = ls->wind_count + 1;
 				if(i > MAX_WINDCNT)
 					break;
@@ -910,7 +913,7 @@ static void eachShape(void* ptr, void* unused) {
 				obj_hanged = w;
 				decrement_counter = &ls->wind_count;
 				break;
-			}	*/			
+			}				
 			case EO_TRANSIT: {
 				int i = ls->transit_count + 1;
 				if(i > MAX_TRANSITCNT)
@@ -1115,7 +1118,7 @@ static void eachShape(void* ptr, void* unused) {
 				Saw* w = [[Saw alloc]initWithParams:self space:space type:ST_VERTICAL];
 				[w setPosition:ccp(240,160)];
 				[[Common instance] setSaw:w at:i-1];
-				ls->isaw[i-1] = ccp(240,160);
+				ls->isaw[i-1].pos = ccp(240,160);
 				obj_hanged = w;
 				decrement_counter = &ls->saw_count;
 				break;
@@ -1499,7 +1502,8 @@ static void eachShape(void* ptr, void* unused) {
 
 			for(int i = 0; i < ls->saw_count; i++) {
 				Saw* w = [[Common instance] getSaw:i];
-				ls->isaw[i] = w.sprite.position;
+				ls->isaw[i].pos = w.sprite.position;
+				ls->isaw[i].type = w.typ;
 			}
 
 			for(int i = 0; i < ls->star_count; i++) {
@@ -1622,6 +1626,19 @@ static void eachShape(void* ptr, void* unused) {
 //	if([Common instance].ballsonfinish > 0)
 //		menu.visible = YES;
 	
+    sawcnt ++;
+    if(sawcnt > 300) {
+        
+        sawcnt = 0;
+        for(int i = 0; i < ls->saw_count; i++) {
+            
+            Saw* s = [[Common instance] getSaw:i];
+            [s changeDir];
+        }    
+    
+    }
+    
+    
 	if(selected < 0)
 		return;
 	

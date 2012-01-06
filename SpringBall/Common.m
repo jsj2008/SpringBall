@@ -446,7 +446,9 @@ LevelStruct* ls = nil;
 	parms->saw_count = [[[prms objectForKey:@"Saw"] objectForKey:@"Saw_count"] intValue];
 	for(int i = 0; i < parms->saw_count; i++) {
 		id obj = [[prms objectForKey:@"Saw"] objectForKey:[NSString stringWithFormat:@"Item%d", i]];
-		parms->isaw[i] = ccp([[obj objectForKey:@"x"] intValue],[[obj objectForKey:@"y"] intValue]);
+		parms->isaw[i].pos = ccp([[obj objectForKey:@"x"] intValue],[[obj objectForKey:@"y"] intValue]);
+        parms->isaw[i].type = [[obj objectForKey:@"Type"] intValue];
+
 	}
 
 	parms->star_count = [[[prms objectForKey:@"Star"] objectForKey:@"Star_count"] intValue];
@@ -515,17 +517,21 @@ LevelStruct* ls = nil;
 		id obj = [objsa objectForKey:[NSString stringWithFormat:@"Item%d", i]];
 		if(!obj) {
 			NSDictionary *item = [NSDictionary dictionaryWithObjects: [NSArray arrayWithObjects:
-																	   [NSNumber numberWithInt:parms->isaw[i].x],
-																	   [NSNumber numberWithInt:parms->isaw[i].y],
+                                                                       [NSNumber numberWithInt:parms->isaw[i].type],
+																	   [NSNumber numberWithInt:parms->isaw[i].pos.x],
+																	   [NSNumber numberWithInt:parms->isaw[i].pos.y],
 																	   nil]
 															 forKeys:[NSArray arrayWithObjects:
+                                                                      @"Type",
 																	  @"x",
 																	  @"y",
 																	  nil]];
 			[objsa setObject:item forKey:[NSString stringWithFormat:@"Item%d", i]]; 
  		} else {
-			[obj setValue:[NSNumber numberWithInt:parms->isaw[i].x] forKey:@"x"];
-			[obj setValue:[NSNumber numberWithInt:parms->isaw[i].y] forKey:@"y"];		
+
+            [obj setValue:[NSNumber numberWithInt:parms->isaw[i].type] forKey:@"Type"];
+			[obj setValue:[NSNumber numberWithInt:parms->isaw[i].pos.x] forKey:@"x"];
+			[obj setValue:[NSNumber numberWithInt:parms->isaw[i].pos.y] forKey:@"y"];		
 		}
 	}	
 	

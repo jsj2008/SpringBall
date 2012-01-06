@@ -12,10 +12,14 @@
 
 @interface Saw : CommonObj {
 
-		int typ;
+//    int typ;
+    BOOL dir;
 }
 
 //- (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space;
 - (id) initWithParams: (CCLayer*)lr space:(cpSpace*)space type:(int)type;
+- (void) changeDir;
+
+@property (readonly) int typ;
 
 @end

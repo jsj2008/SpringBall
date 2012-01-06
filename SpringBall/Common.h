@@ -133,7 +133,7 @@ struct BPStruct {
 	int platform_count2;
 	struct APStruct iplatform2[MAX_PLATFORMCNT2];
 	int saw_count;
-	CGPoint isaw[MAX_SAWCNT];
+	struct TPStruct isaw[MAX_SAWCNT];
 	int star_count;
 	CGPoint istar[MAX_STARCNT];
 	int teleport_count;
