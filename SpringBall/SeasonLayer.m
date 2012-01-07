@@ -73,7 +73,9 @@
         [itemSpring runAction:[CCMoveTo actionWithDuration:0.5f position:ccp(69, f * 0 + e)]];
 
         CCMenuItemImage* itemb = [CCMenuItemImage itemFromNormalImage:@"back.png" selectedImage:@"back_activ.png" target:self selector:@selector(backBt)];
-        itemb.position = ccp(398, 45);	
+//        itemb.position = ccp(398, 45);	
+        itemb.position = ccp(550, 45);	
+        [itemb runAction:[CCMoveTo actionWithDuration:0.5f position:ccp(398, 45)]];
 
         int t = 3;//[[NSUserDefaults standardUserDefaults] integerForKey:@"openSeason"];
         //        [[NSUserDefaults standardUserDefaults] setBool:b forKey:@"onlyWiFi"];

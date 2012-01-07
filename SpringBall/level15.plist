@@ -14,9 +14,9 @@
 		<key>Item0</key>
 		<dict>
 			<key>x</key>
-			<integer>47</integer>
+			<integer>394</integer>
 			<key>y</key>
-			<integer>43</integer>
+			<integer>193</integer>
 		</dict>
 	</dict>
 	<key>Hyper</key>
@@ -31,63 +31,104 @@
 	</dict>
 	<key>Platform</key>
 	<dict>
-		<key>Platform_count</key>
-		<integer>0</integer>
-	</dict>
-	<key>Platform1</key>
-	<dict>
 		<key>Item0</key>
 		<dict>
 			<key>Angle</key>
 			<integer>90</integer>
 			<key>x</key>
-			<integer>44</integer>
+			<integer>324</integer>
 			<key>y</key>
-			<integer>182</integer>
+			<integer>136</integer>
 		</dict>
 		<key>Item1</key>
 		<dict>
 			<key>Angle</key>
-			<integer>0</integer>
+			<integer>90</integer>
 			<key>x</key>
-			<integer>138</integer>
+			<integer>457</integer>
 			<key>y</key>
-			<integer>138</integer>
+			<integer>136</integer>
 		</dict>
 		<key>Item2</key>
 		<dict>
 			<key>Angle</key>
-			<integer>0</integer>
+			<integer>90</integer>
 			<key>x</key>
-			<integer>145</integer>
+			<integer>156</integer>
 			<key>y</key>
-			<integer>48</integer>
+			<integer>132</integer>
 		</dict>
 		<key>Item3</key>
 		<dict>
 			<key>Angle</key>
 			<integer>90</integer>
 			<key>x</key>
-			<integer>421</integer>
+			<integer>23</integer>
 			<key>y</key>
-			<integer>81</integer>
+			<integer>130</integer>
 		</dict>
-		<key>Item4</key>
+		<key>Platform_count</key>
+		<integer>4</integer>
+	</dict>
+	<key>Platform1</key>
+	<dict>
+		<key>Item0</key>
+		<dict>
+			<key>Angle</key>
+			<integer>0</integer>
+			<key>x</key>
+			<integer>171</integer>
+			<key>y</key>
+			<integer>187</integer>
+		</dict>
+		<key>Item1</key>
 		<dict>
 			<key>Angle</key>
 			<integer>90</integer>
 			<key>x</key>
-			<integer>420</integer>
+			<integer>89</integer>
 			<key>y</key>
-			<integer>231</integer>
+			<integer>131</integer>
+		</dict>
+		<key>Item2</key>
+		<dict>
+			<key>Angle</key>
+			<integer>0</integer>
+			<key>x</key>
+			<integer>306</integer>
+			<key>y</key>
+			<integer>192</integer>
+		</dict>
+		<key>Item3</key>
+		<dict>
+			<key>Angle</key>
+			<integer>90</integer>
+			<key>x</key>
+			<integer>390</integer>
+			<key>y</key>
+			<integer>135</integer>
 		</dict>
 		<key>Platform_count1</key>
-		<integer>5</integer>
+		<integer>4</integer>
 	</dict>
 	<key>Platform2</key>
 	<dict>
+		<key>Item0</key>
+		<dict>
+			<key>x</key>
+			<integer>402</integer>
+			<key>y</key>
+			<integer>281</integer>
+		</dict>
+		<key>Item1</key>
+		<dict>
+			<key>x</key>
+			<integer>68</integer>
+			<key>y</key>
+			<integer>279</integer>
+		</dict>
 		<key>Platform_count2</key>
-		<integer>0</integer>
+		<integer>2</integer>
 	</dict>
 	<key>Repel</key>
 	<dict>
@@ -109,109 +150,103 @@
 		<key>Item0</key>
 		<dict>
 			<key>Angle</key>
-			<integer>0</integer>
+			<integer>90</integer>
 			<key>x</key>
-			<integer>32</integer>
+			<integer>317</integer>
 			<key>y</key>
-			<integer>204</integer>
+			<integer>190</integer>
 		</dict>
 		<key>Item1</key>
 		<dict>
 			<key>Angle</key>
-			<integer>0</integer>
+			<integer>270</integer>
 			<key>x</key>
-			<integer>102</integer>
+			<integer>160</integer>
 			<key>y</key>
-			<integer>207</integer>
+			<integer>186</integer>
 		</dict>
 		<key>Item2</key>
 		<dict>
 			<key>Angle</key>
-			<integer>90</integer>
+			<integer>180</integer>
 			<key>x</key>
-			<integer>144</integer>
+			<integer>89</integer>
 			<key>y</key>
-			<integer>221</integer>
+			<integer>121</integer>
 		</dict>
 		<key>Item3</key>
 		<dict>
 			<key>Angle</key>
+			<integer>180</integer>
+			<key>x</key>
+			<integer>389</integer>
+			<key>y</key>
+			<integer>124</integer>
+		</dict>
+		<key>Item4</key>
+		<dict>
+			<key>Angle</key>
 			<integer>90</integer>
 			<key>x</key>
-			<integer>136</integer>
+			<integer>183</integer>
 			<key>y</key>
-			<integer>289</integer>
+			<integer>185</integer>
+		</dict>
+		<key>Item5</key>
+		<dict>
+			<key>Angle</key>
+			<integer>270</integer>
+			<key>x</key>
+			<integer>295</integer>
+			<key>y</key>
+			<integer>188</integer>
+		</dict>
+		<key>Item6</key>
+		<dict>
+			<key>Angle</key>
+			<integer>180</integer>
+			<key>x</key>
+			<integer>408</integer>
+			<key>y</key>
+			<integer>258</integer>
+		</dict>
+		<key>Item7</key>
+		<dict>
+			<key>Angle</key>
+			<integer>180</integer>
+			<key>x</key>
+			<integer>73</integer>
+			<key>y</key>
+			<integer>257</integer>
 		</dict>
 		<key>Spike_count</key>
-		<integer>4</integer>
+		<integer>8</integer>
 	</dict>
 	<key>Star</key>
 	<dict>
 		<key>Item0</key>
 		<dict>
 			<key>x</key>
-			<integer>341</integer>
+			<integer>41</integer>
 			<key>y</key>
-			<integer>90</integer>
+			<integer>74</integer>
 		</dict>
 		<key>Item1</key>
 		<dict>
 			<key>x</key>
-			<integer>66</integer>
+			<integer>435</integer>
 			<key>y</key>
-			<integer>88</integer>
+			<integer>78</integer>
 		</dict>
 		<key>Item2</key>
 		<dict>
 			<key>x</key>
-			<integer>74</integer>
+			<integer>20</integer>
 			<key>y</key>
-			<integer>268</integer>
-		</dict>
-		<key>Item3</key>
-		<dict>
-			<key>x</key>
-			<integer>215</integer>
-			<key>y</key>
-			<integer>244</integer>
-		</dict>
-		<key>Item4</key>
-		<dict>
-			<key>x</key>
-			<integer>247</integer>
-			<key>y</key>
-			<integer>294</integer>
-		</dict>
-		<key>Item5</key>
-		<dict>
-			<key>x</key>
-			<integer>211</integer>
-			<key>y</key>
-			<integer>240</integer>
-		</dict>
-		<key>Item6</key>
-		<dict>
-			<key>x</key>
-			<integer>68</integer>
-			<key>y</key>
-			<integer>93</integer>
-		</dict>
-		<key>Item7</key>
-		<dict>
-			<key>x</key>
-			<integer>342</integer>
-			<key>y</key>
-			<integer>217</integer>
-		</dict>
-		<key>Item8</key>
-		<dict>
-			<key>x</key>
-			<integer>342</integer>
-			<key>y</key>
-			<integer>152</integer>
+			<integer>165</integer>
 		</dict>
 		<key>Star_count</key>
-		<integer>9</integer>
+		<integer>3</integer>
 	</dict>
 	<key>Start</key>
 	<dict>
@@ -220,71 +255,36 @@
 			<key>Balls_count</key>
 			<integer>5</integer>
 			<key>x</key>
-			<integer>416</integer>
+			<integer>242</integer>
 			<key>y</key>
-			<integer>165</integer>
+			<integer>228</integer>
 		</dict>
 		<key>Start_count</key>
 		<integer>1</integer>
 	</dict>
 	<key>Teleport</key>
 	<dict>
+		<key>Teleport_count</key>
+		<integer>0</integer>
+	</dict>
+	<key>Transit</key>
+	<dict>
 		<key>Item0</key>
 		<dict>
 			<key>x</key>
-			<integer>70</integer>
+			<integer>242</integer>
 			<key>y</key>
-			<integer>269</integer>
+			<integer>86</integer>
 		</dict>
 		<key>Item1</key>
 		<dict>
 			<key>x</key>
-			<integer>342</integer>
+			<integer>82</integer>
 			<key>y</key>
-			<integer>215</integer>
+			<integer>190</integer>
 		</dict>
-		<key>Item2</key>
-		<dict>
-			<key>x</key>
-			<integer>344</integer>
-			<key>y</key>
-			<integer>89</integer>
-		</dict>
-		<key>Item3</key>
-		<dict>
-			<key>x</key>
-			<integer>247</integer>
-			<key>y</key>
-			<integer>293</integer>
-		</dict>
-		<key>Item4</key>
-		<dict>
-			<key>x</key>
-			<integer>212</integer>
-			<key>y</key>
-			<integer>241</integer>
-		</dict>
-		<key>Item5</key>
-		<dict>
-			<key>x</key>
-			<integer>67</integer>
-			<key>y</key>
-			<integer>89</integer>
-		</dict>
-		<key>Item6</key>
-		<dict>
-			<key>x</key>
-			<integer>345</integer>
-			<key>y</key>
-			<integer>152</integer>
-		</dict>
-		<key>Teleport_count</key>
-		<integer>7</integer>
-	</dict>
-	<key>Transit</key>
-	<dict>
 		<key>Transit_count</key>
-		<integer>0</integer>
+		<integer>2</integer>
 	</dict>
 	<key>Wind</key>
 	<dict>

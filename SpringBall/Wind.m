@@ -34,7 +34,7 @@
 			[anim1 addFrameWithFilename:[NSString stringWithFormat:@"wing_weak_%d.png", j]];
 
 		id anim2 = [CCAnimation animationWithName:@"strongwind" delay:0.03f];
-		for( int j = 1; j <= 4; j++)
+		for( int j = 1; j <= 10; j++)
 			[anim2 addFrameWithFilename:[NSString stringWithFormat:@"wing_strong_%d.png", j]];
 		
 		anm_move1 = [[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation: anim1 restoreOriginalFrame:NO]]retain];

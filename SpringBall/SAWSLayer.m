@@ -135,8 +135,10 @@
         item15.position = ccp(fx * 4 + ex, fy * 1 + ey);
         
         CCMenuItemImage* itemb = [CCMenuItemImage itemFromNormalImage:@"back.png" selectedImage:@"back_activ.png" target:self selector:@selector(pBack:)];
-        itemb.position = ccp(size.width - 82, 45);	
-        
+//        itemb.position = ccp(size.width - 82, 45);	
+        itemb.position = ccp(550, 45);	
+        [itemb runAction:[CCMoveTo actionWithDuration:0.5f position:ccp(398, 45)]];
+   
 		CCMenu* menu = [CCMenu menuWithItems:item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, itemb, nil];
 		//menu.visible = NO;
 		menu.position = ccp(0,0);

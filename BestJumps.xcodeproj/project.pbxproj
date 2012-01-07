@@ -640,6 +640,21 @@
 		DD9CE25414451EE500365308 /* background_autumn.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9CE25314451EE500365308 /* background_autumn.png */; };
 		DD9CE25714451EEE00365308 /* ground_autumn.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9CE25514451EEE00365308 /* ground_autumn.png */; };
 		DD9CE25814451EEE00365308 /* platform_autumn.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9CE25614451EEE00365308 /* platform_autumn.png */; };
+		DDA957AE14B8C7F10019C313 /* level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA9579F14B8C7F10019C313 /* level1.plist */; };
+		DDA957AF14B8C7F10019C313 /* level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957A014B8C7F10019C313 /* level2.plist */; };
+		DDA957B014B8C7F10019C313 /* level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957A114B8C7F10019C313 /* level3.plist */; };
+		DDA957B114B8C7F10019C313 /* level4.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957A214B8C7F10019C313 /* level4.plist */; };
+		DDA957B214B8C7F10019C313 /* level5.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957A314B8C7F10019C313 /* level5.plist */; };
+		DDA957B314B8C7F10019C313 /* level6.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957A414B8C7F10019C313 /* level6.plist */; };
+		DDA957B414B8C7F10019C313 /* level7.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957A514B8C7F10019C313 /* level7.plist */; };
+		DDA957B514B8C7F10019C313 /* level8.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957A614B8C7F10019C313 /* level8.plist */; };
+		DDA957B614B8C7F10019C313 /* level9.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957A714B8C7F10019C313 /* level9.plist */; };
+		DDA957B714B8C7F10019C313 /* level10.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957A814B8C7F10019C313 /* level10.plist */; };
+		DDA957B814B8C7F10019C313 /* level11.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957A914B8C7F10019C313 /* level11.plist */; };
+		DDA957B914B8C7F10019C313 /* level12.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957AA14B8C7F10019C313 /* level12.plist */; };
+		DDA957BA14B8C7F10019C313 /* level13.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957AB14B8C7F10019C313 /* level13.plist */; };
+		DDA957BB14B8C7F10019C313 /* level14.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957AC14B8C7F10019C313 /* level14.plist */; };
+		DDA957BC14B8C7F10019C313 /* level15.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA957AD14B8C7F10019C313 /* level15.plist */; };
 		DDACB880144A9DF600869937 /* autumn.png in Resources */ = {isa = PBXBuildFile; fileRef = DDACB867144A9DF600869937 /* autumn.png */; };
 		DDACB881144A9DF600869937 /* black_fon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDACB868144A9DF600869937 /* black_fon.png */; };
 		DDACB882144A9DF600869937 /* button_restart_activ.png in Resources */ = {isa = PBXBuildFile; fileRef = DDACB869144A9DF600869937 /* button_restart_activ.png */; };
@@ -1530,6 +1545,21 @@
 		DD9CE25314451EE500365308 /* background_autumn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_autumn.png; sourceTree = "<group>"; };
 		DD9CE25514451EEE00365308 /* ground_autumn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground_autumn.png; sourceTree = "<group>"; };
 		DD9CE25614451EEE00365308 /* platform_autumn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platform_autumn.png; sourceTree = "<group>"; };
+		DDA9579F14B8C7F10019C313 /* level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level1.plist; sourceTree = "<group>"; };
+		DDA957A014B8C7F10019C313 /* level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level2.plist; sourceTree = "<group>"; };
+		DDA957A114B8C7F10019C313 /* level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level3.plist; sourceTree = "<group>"; };
+		DDA957A214B8C7F10019C313 /* level4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level4.plist; sourceTree = "<group>"; };
+		DDA957A314B8C7F10019C313 /* level5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level5.plist; sourceTree = "<group>"; };
+		DDA957A414B8C7F10019C313 /* level6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level6.plist; sourceTree = "<group>"; };
+		DDA957A514B8C7F10019C313 /* level7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level7.plist; sourceTree = "<group>"; };
+		DDA957A614B8C7F10019C313 /* level8.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level8.plist; sourceTree = "<group>"; };
+		DDA957A714B8C7F10019C313 /* level9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level9.plist; sourceTree = "<group>"; };
+		DDA957A814B8C7F10019C313 /* level10.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level10.plist; sourceTree = "<group>"; };
+		DDA957A914B8C7F10019C313 /* level11.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level11.plist; sourceTree = "<group>"; };
+		DDA957AA14B8C7F10019C313 /* level12.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level12.plist; sourceTree = "<group>"; };
+		DDA957AB14B8C7F10019C313 /* level13.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level13.plist; sourceTree = "<group>"; };
+		DDA957AC14B8C7F10019C313 /* level14.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level14.plist; sourceTree = "<group>"; };
+		DDA957AD14B8C7F10019C313 /* level15.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level15.plist; sourceTree = "<group>"; };
 		DDACB867144A9DF600869937 /* autumn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = autumn.png; sourceTree = "<group>"; };
 		DDACB868144A9DF600869937 /* black_fon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_fon.png; sourceTree = "<group>"; };
 		DDACB869144A9DF600869937 /* button_restart_activ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_restart_activ.png; sourceTree = "<group>"; };
@@ -2180,6 +2210,21 @@
 		8C053EE013BDA48300D4520F /* plists */ = {
 			isa = PBXGroup;
 			children = (
+				DDA9579F14B8C7F10019C313 /* level1.plist */,
+				DDA957A014B8C7F10019C313 /* level2.plist */,
+				DDA957A114B8C7F10019C313 /* level3.plist */,
+				DDA957A214B8C7F10019C313 /* level4.plist */,
+				DDA957A314B8C7F10019C313 /* level5.plist */,
+				DDA957A414B8C7F10019C313 /* level6.plist */,
+				DDA957A514B8C7F10019C313 /* level7.plist */,
+				DDA957A614B8C7F10019C313 /* level8.plist */,
+				DDA957A714B8C7F10019C313 /* level9.plist */,
+				DDA957A814B8C7F10019C313 /* level10.plist */,
+				DDA957A914B8C7F10019C313 /* level11.plist */,
+				DDA957AA14B8C7F10019C313 /* level12.plist */,
+				DDA957AB14B8C7F10019C313 /* level13.plist */,
+				DDA957AC14B8C7F10019C313 /* level14.plist */,
+				DDA957AD14B8C7F10019C313 /* level15.plist */,
 				8C053EE113BDA49E00D4520F /* level_pattern.plist */,
 				8C053EE213BDA49E00D4520F /* dist.plist */,
 				8C053EE313BDA49E00D4520F /* params.plist */,
@@ -3767,6 +3812,21 @@
 				DDACB8D8144AA17E00869937 /* ground_spring.png in Resources */,
 				DDACB8D9144AA17E00869937 /* platform_spring.png in Resources */,
 				DDACB8DB144AA4D900869937 /* best_lumps_ball-jump.mp3 in Resources */,
+				DDA957AE14B8C7F10019C313 /* level1.plist in Resources */,
+				DDA957AF14B8C7F10019C313 /* level2.plist in Resources */,
+				DDA957B014B8C7F10019C313 /* level3.plist in Resources */,
+				DDA957B114B8C7F10019C313 /* level4.plist in Resources */,
+				DDA957B214B8C7F10019C313 /* level5.plist in Resources */,
+				DDA957B314B8C7F10019C313 /* level6.plist in Resources */,
+				DDA957B414B8C7F10019C313 /* level7.plist in Resources */,
+				DDA957B514B8C7F10019C313 /* level8.plist in Resources */,
+				DDA957B614B8C7F10019C313 /* level9.plist in Resources */,
+				DDA957B714B8C7F10019C313 /* level10.plist in Resources */,
+				DDA957B814B8C7F10019C313 /* level11.plist in Resources */,
+				DDA957B914B8C7F10019C313 /* level12.plist in Resources */,
+				DDA957BA14B8C7F10019C313 /* level13.plist in Resources */,
+				DDA957BB14B8C7F10019C313 /* level14.plist in Resources */,
+				DDA957BC14B8C7F10019C313 /* level15.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

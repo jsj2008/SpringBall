@@ -14,9 +14,9 @@
 		<key>Item0</key>
 		<dict>
 			<key>x</key>
-			<integer>96</integer>
+			<integer>345</integer>
 			<key>y</key>
-			<integer>103</integer>
+			<integer>126</integer>
 		</dict>
 	</dict>
 	<key>Hyper</key>
@@ -69,12 +69,26 @@
 		<key>Item0</key>
 		<dict>
 			<key>x</key>
-			<integer>230</integer>
+			<integer>241</integer>
 			<key>y</key>
-			<integer>178</integer>
+			<integer>193</integer>
+		</dict>
+		<key>Item1</key>
+		<dict>
+			<key>x</key>
+			<integer>298</integer>
+			<key>y</key>
+			<integer>167</integer>
+		</dict>
+		<key>Item2</key>
+		<dict>
+			<key>x</key>
+			<integer>183</integer>
+			<key>y</key>
+			<integer>201</integer>
 		</dict>
 		<key>Star_count</key>
-		<integer>1</integer>
+		<integer>3</integer>
 	</dict>
 	<key>Start</key>
 	<dict>
@@ -83,9 +97,9 @@
 			<key>Balls_count</key>
 			<integer>3</integer>
 			<key>x</key>
-			<integer>402</integer>
+			<integer>118</integer>
 			<key>y</key>
-			<integer>241</integer>
+			<integer>198</integer>
 		</dict>
 		<key>Start_count</key>
 		<integer>1</integer>

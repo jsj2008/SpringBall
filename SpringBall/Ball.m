@@ -188,9 +188,8 @@
 
 - (void) changeGravity {
 	
-	if(status == BS_FREE) {
+	if((status == BS_FREE) || (status == BS_DIED)) {
 		cpBodyResetForces(body);
-//		if([Common instance].gravityexists)
 			cpBodyApplyForce(body, [[Common instance] getGravity], cpvzero);
 	}
 	
@@ -205,10 +204,11 @@
 
 	if(status == BS_DIED)
 		return;
-	[sprite stopAllActions];
 	status = BS_DIED;
+	[sprite stopAllActions];
 	//[sprite initWithFile:@"2.png"];
-	[sprite runAction:anm_vzr];
+//	if(status == BS_DIED)
+        [sprite runAction:anm_vzr];
 //	cpBodyResetForces(body);
 	body->w = 0;
 	body->i = 0;
@@ -217,13 +217,14 @@
 }
 
 - (void) w_friction {
-	if(status == BS_DIED)
-		return;
+//	if(status == BS_DIED)
+//		return;
 	
 	//NSLog(@"fric");
 
 	body->w *= 0.9;
-	if((body->w * body->w < 0.09) && (body->w * body->w > 0.00001))
+//	if((body->w * body->w < 0.09) && (body->w * body->w > 0.00001))
+	if((body->w * body->w < 0.19) && (body->w * body->w > 0.0000001))
 		[self die];
 }
 
