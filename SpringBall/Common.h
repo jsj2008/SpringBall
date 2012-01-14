@@ -27,7 +27,7 @@
 #define MAX_STARTCNT 3
 #define MAX_FINISHCNT 3
 #define MAX_ARROWCNT 4
-#define MAX_HYPERCNT 3
+#define MAX_HYPERCNT 5
 #define MAX_SPIKECNT 22
 #define MAX_REPELCNT 20
 #define MAX_NOGRAVCNT 2
@@ -37,7 +37,7 @@
 #define MAX_SAWCNT 5
 #define MAX_STARCNT 15
 #define MAX_TELEPORTCNT 8
-#define MAX_SCREWCNT 2
+#define MAX_SCREWCNT 5
 
 #define SEASON_LEVELS_CNT 15
 #define ITEM_TAG 2000
