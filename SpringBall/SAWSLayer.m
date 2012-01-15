@@ -41,25 +41,25 @@
         switch ([Common instance].season) {
             case SZ_SUMMER:
             default:
-                fon = @"fon_summer.png";
+                fon = @"fon_summer.jpg";
                 gazon_activ = @"gazon_summer_activ.png";
                 gazon = @"gazon_summer.png";
                 level_add = 0;
                 break;
             case SZ_AUTUMN:
-                fon = @"fon_autumn.png";
+                fon = @"fon_autumn.jpg";
                 gazon_activ = @"gazon_autumn_activ.png";
                 gazon = @"gazon_autumn.png";
                 level_add = 15;
                 break;
             case SZ_WINTER:
-                fon = @"fon_winter.png";
+                fon = @"fon_winter.jpg";
                 gazon_activ = @"gazon_winter_activ.png";
                 gazon = @"gazon_winter.png";
                 level_add = 30;
                 break;
             case SZ_SPRING:
-                fon = @"fon_spring.png";
+                fon = @"fon_spring.jpg";
                 gazon_activ = @"gazon_spring_activ.png";
                 gazon = @"gazon_spring.png";
                 level_add = 45;

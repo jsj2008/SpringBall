@@ -388,22 +388,22 @@ static void eachShape(void* ptr, void* unused) {
         switch ([Common instance].season) {
             case SZ_SUMMER:
             default:
-                fon = @"background_summer.png";
+                fon = @"background_summer.jpg";
                 fon1 = @"ground_summer.png";
                 szname = @"summer.png";
                 break;
             case SZ_AUTUMN:
-                fon = @"background_autumn.png";
+                fon = @"background_autumn.jpg";
                 fon1 = @"ground_autumn.png";
                 szname = @"autumn.png";
                 break;
             case SZ_WINTER:
-                fon = @"background_winter.png";
+                fon = @"background_winter.jpg";
                 fon1 = @"ground_winter.png";
                 szname = @"winter.png";
                 break;
             case SZ_SPRING:
-                fon = @"background_spring.png";
+                fon = @"background_spring.jpg";
                 fon1 = @"ground_spring.png";
                 szname = @"spring.png";
                 break;

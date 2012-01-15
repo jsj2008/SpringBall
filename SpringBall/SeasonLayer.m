@@ -33,7 +33,7 @@
 		
 		
         CGSize size = [[CCDirector sharedDirector] winSize];
-        CCSprite* bg = [CCSprite spriteWithFile:@"fon_4seasons.png"];
+        CCSprite* bg = [CCSprite spriteWithFile:@"fon_4seasons.jpg"];
         bg.position = ccp(size.width/2, size.height/2);
         [self addChild:bg z:0];
              
